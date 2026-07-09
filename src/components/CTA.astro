@@ -1,0 +1,35 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  text: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+}
+
+const {
+  eyebrow = "Ready to review your RFQ?",
+  title,
+  text,
+  primaryLabel = "Request a Quote",
+  primaryHref = "/contact",
+  secondaryLabel = "Contact Us",
+  secondaryHref = "/contact"
+} = Astro.props;
+---
+
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div>
+      <p class="eyebrow">{eyebrow}</p>
+      <h2>{title}</h2>
+      <p class="lead">{text}</p>
+    </div>
+    <div class="button-row">
+      <a class="button secondary" href={primaryHref}>{primaryLabel}</a>
+      <a class="button bronze" href={secondaryHref}>{secondaryLabel}</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import PageHero from "../components/PageHero.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+
+const services = [
+  {
+    title: "Apparel Manufacturing",
+    text: "OEM/ODM support for T-shirts, blanks, streetwear basics and custom apparel.",
+    href: "/apparel-manufacturing",
+    image: "/images/apparel-placeholder.jpg"
+  },
+  {
+    title: "Home Storage Products",
+    text: "Sourcing for fabric storage boxes, closet organizers, kitchen and bathroom storage products.",
+    href: "/home-storage-products",
+    image: "/images/home-storage-placeholder.jpg"
+  }
+];
+---
+
+<BaseLayout
+  title="Consumer Product Sourcing from China | Tomi Trading"
+  description="OEM and ODM consumer product sourcing support for apparel manufacturing, home storage products, packaging and export coordination."
+  image="/images/home-storage-placeholder.jpg"
+>
+  <PageHero
+    eyebrow="Consumer products"
+    title="Selected consumer product sourcing from China"
+    text="Tomi Trading supports apparel and home storage product sourcing, OEM/ODM production, packaging coordination and export preparation."
+    image="/images/home-storage-placeholder.jpg"
+    imageAlt="Consumer products placeholder"
+  />
+
+  <section class="section white">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Focused categories</p>
+        <h2>Clear categories for cleaner factory matching</h2>
+        <p class="lead">
+          We focus on practical, repeatable consumer product categories where buyers often
+          need help with materials, samples, colors, packaging and export coordination.
+        </p>
+      </div>
+      <div class="grid two">
+        {services.map((service) => <ServiceCard {...service} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="content-block">
+        <p class="eyebrow">OEM / ODM support</p>
+        <h2>From product idea to sample and production follow-up</h2>
+        <p>
+          For apparel and home storage products, we help clarify materials, color options,
+          size details, packaging requirements and export preparation so buyers can compare
+          options more efficiently.
+        </p>
+        <ul>
+          <li>Factory partner communication and quotation follow-up</li>
+          <li>Sample coordination before bulk order confirmation</li>
+          <li>Packaging, labeling and carton information coordination</li>
+          <li>Pre-shipment checking based on buyer requirements</li>
+        </ul>
+      </div>
+      <div class="image-frame">
+        <img src="/images/apparel-placeholder.jpg" alt="Apparel placeholder" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <ContactCTA />
+</BaseLayout>

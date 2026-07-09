@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import PageHero from "../components/PageHero.astro";
+---
+
+<BaseLayout
+  title="Home Storage Product Sourcing from China | Tomi Trading"
+  description="China sourcing support for fabric storage boxes, closet organizers, kitchen and bathroom storage products, OEM packaging and wholesale orders."
+  image="/images/home-storage-placeholder.jpg"
+>
+  <PageHero
+    eyebrow="Home storage products"
+    title="Home storage product sourcing for wholesalers and importers"
+    text="We support sourcing for fabric storage boxes, closet organizers, kitchen and bathroom storage products, OEM packaging and export coordination."
+    image="/images/home-storage-placeholder.jpg"
+    imageAlt="Home storage products placeholder"
+  />
+
+  <section class="section white">
+    <div class="container split">
+      <div class="content-block">
+        <p class="eyebrow">Product scope</p>
+        <h2>Organized sourcing for practical household storage categories</h2>
+        <p>
+          We help overseas buyers compare suitable factory options, coordinate samples and
+          prepare packaging or carton details for wholesale and importer orders.
+        </p>
+        <ul>
+          <li>Fabric storage boxes and foldable organizers</li>
+          <li>Closet organizers and wardrobe storage products</li>
+          <li>Kitchen and bathroom storage products</li>
+          <li>OEM packaging and carton information coordination</li>
+          <li>Wholesale and importer support</li>
+        </ul>
+      </div>
+      <div class="image-frame">
+        <img src="/images/home-storage-placeholder.jpg" alt="Home storage placeholder" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Helpful RFQ details</p>
+        <h2>Information that improves quotation accuracy</h2>
+      </div>
+      <div class="grid three">
+        <article class="card feature-card"><h3>Materials</h3><p>Fabric, board, plastic, metal accessories or mixed materials where applicable.</p></article>
+        <article class="card feature-card"><h3>Size and color</h3><p>Dimensions, color references, series requirements and packaging format.</p></article>
+        <article class="card feature-card"><h3>Order target</h3><p>Quantity, destination market, wholesale channel and shipment preference.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <ContactCTA />
+</BaseLayout>

@@ -1,0 +1,92 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import { SITE } from "../data/site";
+
+const mailtoAction = `mailto:${SITE.email}?subject=RFQ%20from%20Tomi%20Trading%20website`;
+---
+
+<BaseLayout
+  title="Contact Tomi Trading | China Sourcing RFQ"
+  description="Contact Guangzhou Tomi Trading Co., Ltd. for sourcing and custom manufacturing RFQs by email or WhatsApp."
+  image="/images/export-support-placeholder.jpg"
+>
+  <PageHero
+    eyebrow="Contact / RFQ"
+    title="Send your RFQ to Tomi Trading"
+    text="Share a drawing, product photo, sample requirement or sourcing brief. We will review feasibility and reply with practical next steps."
+    image="/images/export-support-placeholder.jpg"
+    imageAlt="Contact Tomi Trading placeholder"
+  />
+
+  <section class="section white">
+    <div class="container split">
+      <div class="card contact-details">
+        <div class="contact-line">
+          <strong>Company</strong>
+          <span>{SITE.companyName}</span>
+        </div>
+        <div class="contact-line">
+          <strong>Location</strong>
+          <span>{SITE.location}</span>
+        </div>
+        <div class="contact-line">
+          <strong>Email</strong>
+          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+        </div>
+        <div class="contact-line">
+          <strong>WhatsApp</strong>
+          <a href={SITE.whatsappUrl}>{SITE.whatsappDisplay}</a>
+        </div>
+        <div class="button-row">
+          <a class="button primary" href={`mailto:${SITE.email}`}>Email Us</a>
+          <a class="button secondary" href={SITE.whatsappUrl}>WhatsApp Us</a>
+          <a class="button bronze" href={mailtoAction}>Send Drawing</a>
+        </div>
+      </div>
+
+      <form class="card feature-card" action={mailtoAction} method="post" enctype="text/plain">
+        <p class="eyebrow">Visual RFQ form</p>
+        <h2>Send RFQ</h2>
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="Name" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input id="company" name="Company" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="country">Country</label>
+            <input id="country" name="Country" autocomplete="country-name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="Email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field full">
+            <label for="category">Product category</label>
+            <select id="category" name="Product category">
+              <option value="CNC machining">CNC machining</option>
+              <option value="Sheet metal fabrication">Sheet metal fabrication</option>
+              <option value="Small machinery and power equipment">Small machinery and power equipment</option>
+              <option value="Apparel manufacturing">Apparel manufacturing</option>
+              <option value="Home storage products">Home storage products</option>
+              <option value="Other sourcing request">Other sourcing request</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="message">Message / RFQ details</label>
+            <textarea id="message" name="Message / RFQ details" placeholder="Material, quantity, drawing availability, target price, packaging, destination market or other details."></textarea>
+          </div>
+        </div>
+        <p class="note">For drawings or files, please email us directly at {SITE.email}.</p>
+        <div class="button-row">
+          <button class="button primary" type="submit">Send RFQ</button>
+          <a class="button secondary" href={SITE.whatsappUrl}>WhatsApp Us</a>
+        </div>
+      </form>
+    </div>
+  </section>
+</BaseLayout>

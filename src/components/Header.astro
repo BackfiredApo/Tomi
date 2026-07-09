@@ -1,0 +1,45 @@
+---
+import { NAV_ITEMS, SITE } from "../data/site";
+
+const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label={`${SITE.brandName} home`}>
+      <strong>{SITE.brandName}</strong>
+      <span>China sourcing & manufacturing partner</span>
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      {
+        NAV_ITEMS.map((item) => {
+          const itemPath = item.href.replace(/\/$/, "") || "/";
+          return (
+            <a href={item.href} aria-current={pathname === itemPath ? "page" : undefined}>
+              {item.label}
+            </a>
+          );
+        })
+      }
+    </nav>
+
+    <div class="desktop-actions">
+      <a class="button primary" href="/contact">Request a Quote</a>
+    </div>
+
+    <details class="mobile-menu">
+      <summary>Menu</summary>
+      <nav aria-label="Mobile navigation">
+        {
+          NAV_ITEMS.map((item) => (
+            <a href={item.href}>
+              {item.label}
+            </a>
+          ))
+        }
+        <a class="button primary" href="/contact">Request a Quote</a>
+      </nav>
+    </details>
+  </div>
+</header>

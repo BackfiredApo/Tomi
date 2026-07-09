@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import PageHero from "../components/PageHero.astro";
+---
+
+<BaseLayout
+  title="About Guangzhou Tomi Trading Co., Ltd. | Tomi Trading"
+  description="Learn how Tomi Trading supports overseas buyers with China sourcing, custom manufacturing coordination, quality checking and export support."
+  image="/images/export-support-placeholder.jpg"
+>
+  <PageHero
+    eyebrow="About us"
+    title="A China-based sourcing and custom manufacturing partner"
+    text="Guangzhou Tomi Trading Co., Ltd. works with overseas clients that need practical support finding, quoting and coordinating suitable factory partners in China."
+    image="/images/export-support-placeholder.jpg"
+    imageAlt="Export support placeholder"
+  />
+
+  <section class="section white">
+    <div class="container split">
+      <div class="content-block">
+        <p class="eyebrow">Positioning</p>
+        <h2>Focused on two supply chain directions</h2>
+        <p>
+          Tomi Trading is not positioned as a random catalog seller. We focus on two
+          clear sourcing directions: industrial manufacturing and selected consumer
+          products. This helps us keep communication organized and match projects with
+          more suitable manufacturing partners.
+        </p>
+      </div>
+      <div class="grid two">
+        <article class="card feature-card">
+          <span class="mark">01</span>
+          <h3>Industrial Manufacturing</h3>
+          <p>CNC machining, sheet metal fabrication, small machinery, spare parts and custom components.</p>
+        </article>
+        <article class="card feature-card">
+          <span class="mark">02</span>
+          <h3>Consumer Products</h3>
+          <p>Apparel manufacturing, home storage products and OEM/ODM consumer goods.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">How we help</p>
+        <h2>Support for early RFQ clarity and order coordination</h2>
+      </div>
+      <div class="grid three">
+        <article class="card feature-card">
+          <h3>Requirement review</h3>
+          <p>We review drawings, photos, samples or product briefs and clarify the key details needed for quotation.</p>
+        </article>
+        <article class="card feature-card">
+          <h3>Factory partner matching</h3>
+          <p>We coordinate with suitable factory partners based on process, category, quantity and market needs.</p>
+        </article>
+        <article class="card feature-card">
+          <h3>Export preparation</h3>
+          <p>We help prepare commercial documents, packing information and communication with freight forwarders.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <ContactCTA />
+</BaseLayout>

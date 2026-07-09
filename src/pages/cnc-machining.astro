@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import PageHero from "../components/PageHero.astro";
+---
+
+<BaseLayout
+  title="CNC Machining Supplier in China | Tomi Trading"
+  description="RFQ support for CNC machined aluminum, steel and stainless-steel parts through selected manufacturing partners in China."
+  image="/images/cnc-machining-placeholder.jpg"
+>
+  <PageHero
+    eyebrow="CNC machining"
+    title="CNC machining sourcing for custom metal parts"
+    text="Tomi Trading supports overseas buyers with RFQ coordination for aluminum, steel and stainless-steel machined parts through selected manufacturing partners."
+    image="/images/cnc-machining-placeholder.jpg"
+    imageAlt="CNC machining placeholder"
+  />
+
+  <section class="section white">
+    <div class="container split">
+      <div class="content-block">
+        <p class="eyebrow">Process scope</p>
+        <h2>Machining capabilities we can help source</h2>
+        <p>
+          We can coordinate quotation and production discussion for 3-axis and 4-axis CNC
+          machining, CNC turning and related finishing requirements depending on the part
+          geometry and quantity.
+        </p>
+        <ul>
+          <li>Aluminum, steel and stainless-steel parts</li>
+          <li>3-axis and 4-axis CNC machining support</li>
+          <li>CNC turning for shafts, bushings, adapters and similar parts</li>
+          <li>Prototype, spare part and second-source quotation support</li>
+        </ul>
+      </div>
+      <div class="grid two">
+        <article class="card feature-card">
+          <h3>Typical parts</h3>
+          <p>Brackets, bushings, shafts, flanges, adapter parts, fixtures, panels and machine components.</p>
+        </article>
+        <article class="card feature-card">
+          <h3>Inspection options</h3>
+          <p>CMM inspection is available through selected manufacturing partners. Inspection reports can be arranged depending on project requirements.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">RFQ inputs</p>
+        <h2>Useful information for faster quotation</h2>
+      </div>
+      <div class="grid three">
+        <article class="card feature-card">
+          <span class="mark">01</span>
+          <h3>Drawing or 3D file</h3>
+          <p>PDF drawing, STEP file or a clear sketch helps confirm tolerance, geometry and machining method.</p>
+        </article>
+        <article class="card feature-card">
+          <span class="mark">02</span>
+          <h3>Material and finish</h3>
+          <p>Share material grade, surface treatment, hardness or appearance requirements where available.</p>
+        </article>
+        <article class="card feature-card">
+          <span class="mark">03</span>
+          <h3>Quantity and use case</h3>
+          <p>Prototype, spare part, batch production and replacement sourcing can require different factory matching.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <ContactCTA />
+</BaseLayout>

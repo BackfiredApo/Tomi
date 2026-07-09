@@ -1,0 +1,177 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import ProcessStep from "../components/ProcessStep.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import { RFQ_STEPS, SERVICE_LINKS } from "../data/site";
+---
+
+<BaseLayout
+  title="China Sourcing & Custom Manufacturing Partner | Tomi Trading"
+  description="Tomi Trading helps overseas buyers source CNC machining, sheet metal fabrication, small machinery, apparel and home storage products from factory partners in China."
+  image="/images/cnc-machining-placeholder.jpg"
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Guangzhou, China</p>
+        <h1>China Sourcing & Custom Manufacturing Partner</h1>
+        <p class="lead">
+          CNC machining, sheet metal fabrication, small machinery, apparel and home
+          storage products from reliable factory partners in China.
+        </p>
+        <div class="button-row">
+          <a class="button primary" href="/contact">Request a Quote</a>
+          <a class="button secondary" href="/contact">Contact Us</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <img src="/images/cnc-machining-placeholder.jpg" alt="Industrial manufacturing placeholder" />
+        <div class="hero-panel-footer">
+          <div class="hero-stat">
+            <strong>2</strong>
+            <span>Supply chain directions</span>
+          </div>
+          <div class="hero-stat">
+            <strong>RFQ</strong>
+            <span>Drawing or product brief</span>
+          </div>
+          <div class="hero-stat">
+            <strong>CN</strong>
+            <span>Factory partner network</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">What we support</p>
+        <h2>Two focused directions for overseas buyers</h2>
+        <p class="lead">
+          We keep the website simple because the work is practical: review the requirement,
+          match suitable factory partners, clarify quality expectations and support export
+          coordination.
+        </p>
+      </div>
+      <div class="grid three">
+        {SERVICE_LINKS.map((service) => <ServiceCard {...service} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Why work with Tomi Trading</p>
+        <h2>Practical sourcing support before and after quotation</h2>
+      </div>
+      <div class="grid three">
+        <article class="card feature-card">
+          <span class="mark">01</span>
+          <h3>Factory network in China</h3>
+          <p>We help identify suitable manufacturing partners based on category, process and order needs.</p>
+        </article>
+        <article class="card feature-card">
+          <span class="mark">02</span>
+          <h3>RFQ from limited inputs</h3>
+          <p>Start from one drawing, sample photo or product requirement and we will help clarify the next details.</p>
+        </article>
+        <article class="card feature-card">
+          <span class="mark">03</span>
+          <h3>DFM feedback</h3>
+          <p>For custom industrial parts, DFM comments can be coordinated with selected manufacturing partners.</p>
+        </article>
+        <article class="card feature-card">
+          <span class="mark">04</span>
+          <h3>Quality coordination</h3>
+          <p>Inspection and documentation support can be arranged depending on product type and buyer requirements.</p>
+        </article>
+        <article class="card feature-card">
+          <span class="mark">05</span>
+          <h3>Flexible order support</h3>
+          <p>We support prototype, spare part, small-batch and production order sourcing where feasible.</p>
+        </article>
+        <article class="card feature-card">
+          <span class="mark">06</span>
+          <h3>Export coordination</h3>
+          <p>Commercial documents, packing details and freight forwarder coordination can be handled with the order.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="container split">
+      <div class="image-frame">
+        <img src="/images/sheet-metal-placeholder.jpg" alt="Sheet metal fabrication placeholder" loading="lazy" />
+      </div>
+      <div class="content-block">
+        <p class="eyebrow">Industrial manufacturing</p>
+        <h2>Custom parts and equipment sourcing for industrial buyers</h2>
+        <p>
+          We support overseas equipment manufacturers, automation companies, machinery
+          companies, agricultural equipment companies, automotive component companies and
+          industrial buyers that need practical sourcing support in China.
+        </p>
+        <ul>
+          <li>CNC precision machining, turning and custom metal components</li>
+          <li>Sheet metal panels, brackets, covers, cabinets and small assemblies</li>
+          <li>Small machinery, power equipment and light industrial products</li>
+        </ul>
+        <div class="button-row">
+          <a class="button primary" href="/industrial-manufacturing">Explore Industrial Manufacturing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split reverse">
+      <div class="content-block">
+        <p class="eyebrow">Consumer products</p>
+        <h2>OEM and ODM support for selected consumer product categories</h2>
+        <p>
+          We support apparel and home storage product sourcing, OEM/ODM production,
+          packaging coordination and export preparation for wholesalers, importers and
+          brand owners.
+        </p>
+        <ul>
+          <li>T-shirts, blanks, streetwear basics and custom apparel</li>
+          <li>Fabric storage boxes, closet organizers and household storage products</li>
+          <li>Packaging, label and carton information coordination</li>
+        </ul>
+        <div class="button-row">
+          <a class="button primary" href="/consumer-products">Explore Consumer Products</a>
+        </div>
+      </div>
+      <div class="image-frame">
+        <img src="/images/home-storage-placeholder.jpg" alt="Home storage product placeholder" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">RFQ process</p>
+        <h2>A simple path from requirement to shipment support</h2>
+      </div>
+      <div class="process-grid">
+        {RFQ_STEPS.map((step, index) => <ProcessStep number={index + 1} title={step.title} text={step.text} />)}
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Send us one drawing, product photo or sourcing request."
+    text="We will check feasibility and reply with practical next steps for quotation, sampling or production."
+    primaryLabel="Send RFQ"
+    secondaryLabel="WhatsApp Us"
+    secondaryHref="https://wa.me/8615817011257"
+  />
+  <ContactCTA />
+</BaseLayout>

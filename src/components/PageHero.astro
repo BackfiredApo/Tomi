@@ -1,0 +1,32 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  text: string;
+  image?: string;
+  imageAlt?: string;
+}
+
+const { eyebrow, title, text, image, imageAlt = title } = Astro.props;
+---
+
+<section class="page-hero">
+  <div class="container page-hero-grid">
+    <div class="page-hero-copy">
+      {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+      <h1>{title}</h1>
+      <p class="lead">{text}</p>
+      <div class="button-row">
+        <a class="button primary" href="/contact">Request a Quote</a>
+        <a class="button secondary" href="/contact">Contact Us</a>
+      </div>
+    </div>
+    {
+      image && (
+        <div class="page-hero-image">
+          <img src={image} alt={imageAlt} />
+        </div>
+      )
+    }
+  </div>
+</section>

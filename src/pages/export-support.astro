@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import PageHero from "../components/PageHero.astro";
+---
+
+<BaseLayout
+  title="Export Support from China | Tomi Trading"
+  description="Export support from China including commercial invoice, packing list, carton information, HS code coordination, freight forwarder coordination and shipping support."
+  image="/images/export-support-placeholder.jpg"
+>
+  <PageHero
+    eyebrow="Export support"
+    title="Export coordination for overseas buyers"
+    text="We support commercial documents, carton information, freight forwarder coordination and air or sea shipment preparation for orders from China."
+    image="/images/export-support-placeholder.jpg"
+    imageAlt="Export support placeholder"
+  />
+
+  <section class="section white">
+    <div class="container split">
+      <div class="content-block">
+        <p class="eyebrow">Documentation support</p>
+        <h2>Clear export details help buyers move faster</h2>
+        <p>
+          We help coordinate the common export information buyers and freight forwarders
+          need. Brazil and Saudi Arabia export experience can be discussed generally for
+          relevant orders, while customs requirements should always be confirmed with the
+          buyer's own broker or forwarder.
+        </p>
+        <ul>
+          <li>Commercial invoice and packing list coordination</li>
+          <li>Carton size, weight and packing information</li>
+          <li>HS code coordination with factory partners and forwarders</li>
+          <li>Freight forwarder communication</li>
+          <li>Air and sea shipping support</li>
+        </ul>
+      </div>
+      <div class="grid two">
+        <article class="card feature-card">
+          <h3>For buyers</h3>
+          <p>We organize order, packing and shipment information so the buyer has a clearer handoff to their logistics partner.</p>
+        </article>
+        <article class="card feature-card">
+          <h3>For forwarders</h3>
+          <p>We can coordinate shipment-ready details such as cartons, weights, product descriptions and commercial documents.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <ContactCTA />
+</BaseLayout>

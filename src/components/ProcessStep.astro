@@ -1,0 +1,15 @@
+---
+interface Props {
+  number: number;
+  title: string;
+  text: string;
+}
+
+const { number, title, text } = Astro.props;
+---
+
+<article class="card process-step">
+  <span class="process-number">{String(number).padStart(2, "0")}</span>
+  <h3>{title}</h3>
+  <p>{text}</p>
+</article>

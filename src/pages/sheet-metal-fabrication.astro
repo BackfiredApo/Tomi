@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import PageHero from "../components/PageHero.astro";
+---
+
+<BaseLayout
+  title="Sheet Metal Fabrication Supplier in China | Tomi Trading"
+  description="China sheet metal fabrication sourcing for laser cutting, bending, welding, riveting, panels, brackets, cabinets and small assemblies."
+  image="/images/sheet-metal-placeholder.jpg"
+>
+  <PageHero
+    eyebrow="Sheet metal fabrication"
+    title="Sheet metal fabrication sourcing for industrial buyers"
+    text="We coordinate sheet metal RFQs with factory partners for panels, covers, mounting plates, brackets, cabinets and small assemblies."
+    image="/images/sheet-metal-placeholder.jpg"
+    imageAlt="Sheet metal fabrication placeholder"
+  />
+
+  <section class="section white">
+    <div class="container split">
+      <div class="content-block">
+        <p class="eyebrow">Fabrication support</p>
+        <h2>From flat parts to welded assemblies</h2>
+        <p>
+          We help overseas buyers source sheet metal parts and assemblies where the
+          requirement may include cutting, forming, welding, riveting and surface
+          treatment coordination.
+        </p>
+        <ul>
+          <li>Laser cutting for plates, panels and blanks</li>
+          <li>Bending and forming for brackets, covers and mounting plates</li>
+          <li>Welding and riveting for small assemblies</li>
+          <li>Surface treatment support based on product requirements</li>
+        </ul>
+      </div>
+      <div class="image-frame">
+        <img src="/images/sheet-metal-placeholder.jpg" alt="Sheet metal placeholder" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Common products</p>
+        <h2>Parts and assemblies we can help quote</h2>
+      </div>
+      <div class="grid four">
+        <article class="card feature-card"><h3>Panels</h3><p>Equipment panels, control covers and enclosure parts.</p></article>
+        <article class="card feature-card"><h3>Brackets</h3><p>Mounting brackets, support plates and custom formed parts.</p></article>
+        <article class="card feature-card"><h3>Cabinets</h3><p>Small cabinets, covers and light enclosure assemblies.</p></article>
+        <article class="card feature-card"><h3>Assemblies</h3><p>Cut, bent, welded, riveted and finished sheet metal assemblies.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <ContactCTA />
+</BaseLayout>

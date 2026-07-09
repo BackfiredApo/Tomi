@@ -1,0 +1,45 @@
+---
+import { SITE } from "../data/site";
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h2>{SITE.brandName}</h2>
+        <p>
+          {SITE.companyName} helps overseas buyers source and manufacture industrial
+          parts, small machinery, apparel and consumer products from reliable factory
+          partners in China.
+        </p>
+      </div>
+      <div>
+        <h3>Industrial</h3>
+        <div class="footer-links">
+          <a href="/cnc-machining">CNC Machining</a>
+          <a href="/sheet-metal-fabrication">Sheet Metal Fabrication</a>
+          <a href="/small-machinery-power-equipment">Small Machinery</a>
+        </div>
+      </div>
+      <div>
+        <h3>Consumer</h3>
+        <div class="footer-links">
+          <a href="/apparel-manufacturing">Apparel Manufacturing</a>
+          <a href="/home-storage-products">Home Storage Products</a>
+          <a href="/consumer-products">OEM / ODM Sourcing</a>
+        </div>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <div class="footer-links">
+          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+          <a href={SITE.whatsappUrl}>WhatsApp {SITE.whatsappDisplay}</a>
+          <span>{SITE.location}</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {new Date().getFullYear()} {SITE.companyName}. All rights reserved.</span>
+    </div>
+  </div>
+</footer>

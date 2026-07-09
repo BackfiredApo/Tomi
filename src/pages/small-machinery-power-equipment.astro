@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import PageHero from "../components/PageHero.astro";
+---
+
+<BaseLayout
+  title="Small Machinery & Power Equipment Sourcing from China | Tomi Trading"
+  description="Factory matching and export coordination for generators, water pumps, small power equipment and light industrial machines from China."
+  image="/images/small-machinery-placeholder.jpg"
+>
+  <PageHero
+    eyebrow="Small machinery"
+    title="Small machinery and power equipment sourcing"
+    text="We help buyers source small power equipment, generators, water pumps and light industrial machines through suitable factory partners in China."
+    image="/images/small-machinery-placeholder.jpg"
+    imageAlt="Small machinery placeholder"
+  />
+
+  <section class="section white">
+    <div class="container split">
+      <div class="content-block">
+        <p class="eyebrow">Factory matching</p>
+        <h2>Suitable for importers and regional distributors</h2>
+        <p>
+          This category is focused on OEM sourcing and factory matching for products that
+          require practical specification review, packaging confirmation and export
+          coordination.
+        </p>
+        <ul>
+          <li>Small power equipment and light industrial machines</li>
+          <li>Generators, water pumps and related equipment categories</li>
+          <li>OEM sourcing, model comparison and factory communication</li>
+          <li>General support for markets such as Brazil, Saudi Arabia and other export markets</li>
+        </ul>
+      </div>
+      <div class="grid two">
+        <article class="card feature-card">
+          <h3>Specification review</h3>
+          <p>We help clarify model, power, voltage, packaging, quantity and target market requirements before quotation.</p>
+        </article>
+        <article class="card feature-card">
+          <h3>Export coordination</h3>
+          <p>We can coordinate packing information, commercial documents and communication with freight forwarders.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <ContactCTA />
+</BaseLayout>
