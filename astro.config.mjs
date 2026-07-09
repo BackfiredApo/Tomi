@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://tomitrading.com",
+  site: "https://www.tomitrading.com",
   trailingSlash: "never"
 });

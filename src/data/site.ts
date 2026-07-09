@@ -2,7 +2,7 @@ export const SITE = {
   brandName: "Tomi Trading",
   companyName: "Guangzhou Tomi Trading Co., Ltd.",
   domain: "tomitrading.com",
-  siteUrl: "https://tomitrading.com",
+  siteUrl: "https://www.tomitrading.com",
   email: "sales@tomitrading.com",
   whatsappDisplay: "+86 15817011257",
   whatsappUrl: "https://wa.me/8615817011257",
