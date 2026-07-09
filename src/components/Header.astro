@@ -7,8 +7,11 @@ const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="/" aria-label={`${SITE.brandName} home`}>
-      <strong>{SITE.brandName}</strong>
-      <span>China sourcing & manufacturing partner</span>
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span class="logo-copy">
+        <strong>{SITE.brandName}</strong>
+        <span>China sourcing & manufacturing partner</span>
+      </span>
     </a>
 
     <nav class="nav" aria-label="Main navigation">
