@@ -77,6 +77,9 @@ Replace these files with approved product, city, packaging or logistics photos w
 - `home-storage-products-visual.jpg`
 - `sourcing-services-visual.jpg`
 - `quality-inspection-visual.jpg`
+- `quality-site-visit-visual.jpg`
+- `export-support-visual.jpg`
+- `about-tomi-trading-visual.jpg`
 - `contact-rfq-visual.jpg`
 - `automotive-film-placeholder.jpg`
 - `quality-inspection-placeholder.jpg`
