@@ -75,6 +75,9 @@ Replace these files with approved product, city, packaging or logistics photos w
 - `small-machinery-visual.jpg`
 - `garments-visual.jpg`
 - `home-storage-products-visual.jpg`
+- `sourcing-services-visual.jpg`
+- `quality-inspection-visual.jpg`
+- `contact-rfq-visual.jpg`
 - `automotive-film-placeholder.jpg`
 - `quality-inspection-placeholder.jpg`
 - `export-support-placeholder.jpg`
