@@ -39,10 +39,7 @@ const steps = [
       <p class="eyebrow">Our mission</p>
       <div>
         <h2>Make China sourcing clearer and easier to manage.</h2>
-        <p>
-          We turn a product brief into a practical buying conversation, from product matching
-          and samples to packaging and shipment coordination.
-        </p>
+        <p>From product brief to sample, packaging and shipment coordination.</p>
       </div>
     </div>
   </section>
@@ -52,7 +49,7 @@ const steps = [
       <div class="section-header products-header">
         <p class="eyebrow">What we source</p>
         <h2>Selected product categories</h2>
-        <p class="lead">Start with the category closest to your requirement. We will help clarify the useful next details.</p>
+        <p class="lead">Choose a category to begin.</p>
       </div>
       <div class="category-grid">
         {PRODUCT_CATEGORIES.map((category) => <ServiceCard {...category} />)}
@@ -65,7 +62,7 @@ const steps = [
       <div class="service-layout-copy">
         <p class="eyebrow">How we help</p>
         <h2>Simple support around the order.</h2>
-        <p>One China-side contact for the work that sits between a product requirement and an export-ready order.</p>
+        <p>Sourcing / samples / quality / shipping.</p>
         <a class="button text" href="/services">Explore our services</a>
       </div>
       <div class="service-grid">
@@ -100,7 +97,7 @@ const steps = [
   <CTA
     eyebrow="Ready when you are"
     title="Start with one product brief."
-    text="A drawing, photo, product link or buying list is enough to begin the conversation."
+    text="Drawing / product photo / sample requirement / sourcing brief."
     primaryLabel="Send an RFQ"
     secondaryLabel="WhatsApp Us"
     secondaryHref={SITE.whatsappUrl}

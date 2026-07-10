@@ -21,35 +21,35 @@ export const NAV_ITEMS = [
 export const PRODUCT_CATEGORIES = [
   {
     title: "CNC Machined Parts",
-    text: "Custom brackets, shafts, bushings, flanges and precision metal components through selected manufacturing partners.",
+    text: "Brackets, shafts, bushings, flanges and custom metal parts.",
     href: "/cnc-machining",
     image: "/images/cnc-machining-placeholder.jpg",
     meta: "Industrial parts"
   },
   {
     title: "Small Machinery",
-    text: "Water pumps, generators, compactors and practical equipment sourcing for importers and distributors.",
+    text: "Water pumps, generators and compactors.",
     href: "/small-machinery-power-equipment",
     image: "/images/small-machinery-placeholder.jpg",
     meta: "Power equipment"
   },
   {
     title: "Home Storage Products",
-    text: "Storage boxes, organizers and household storage product sourcing with packaging coordination.",
+    text: "Storage boxes, organizers and household storage.",
     href: "/home-storage-products",
     image: "/images/home-storage-placeholder.jpg",
     meta: "Consumer goods"
   },
   {
     title: "PPF & TPU Color Change Film",
-    text: "Paint protection film and color change film sourcing for automotive film distributors and installers.",
+    text: "PPF and TPU color change film.",
     href: "/automotive-films",
     image: "/images/automotive-film-placeholder.jpg",
     meta: "Automotive films"
   },
   {
     title: "Garments",
-    text: "T-shirts, hoodies, pants, jeans and everyday apparel with OEM and private-label coordination.",
+    text: "T-shirts, hoodies, pants and jeans.",
     href: "/apparel-manufacturing",
     image: "/images/apparel-placeholder.jpg",
     meta: "Apparel sourcing"
@@ -60,27 +60,27 @@ export const SERVICE_LINKS = [
   {
     number: "01",
     title: "Factory Sourcing",
-    text: "Match product requirements with suitable factory partners in Guangzhou and wider China."
+    text: "Product matching in Guangzhou and wider China."
   },
   {
     number: "02",
     title: "OEM & ODM Support",
-    text: "Coordinate specifications, materials, finishes, colors, labels and packaging requirements."
+    text: "Materials, colors, labels and packaging."
   },
   {
     number: "03",
     title: "Sample Support",
-    text: "Organize sample review and clarify practical details before a bulk production decision."
+    text: "Samples before bulk production."
   },
   {
     number: "04",
     title: "Quality Inspection",
-    text: "Arrange inspection scope and supporting documentation based on product and buyer requirements."
+    text: "Inspection scope by requirement."
   },
   {
     number: "05",
     title: "Consolidated Shipping",
-    text: "Coordinate carton information, export documents and freight forwarder handover for multi-supplier orders."
+    text: "Cartons, documents and forwarder handover."
   }
 ];
 
