@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactCTA from "../components/ContactCTA.astro";
+import CategoryProfile from "../components/CategoryProfile.astro";
 import PageHero from "../components/PageHero.astro";
 ---
 
@@ -11,13 +12,24 @@ import PageHero from "../components/PageHero.astro";
 >
   <PageHero
     eyebrow="Small machinery"
-    title="Small machinery and power equipment sourcing"
-    text="We help buyers source small power equipment, generators, water pumps and light industrial machines through suitable factory partners in China."
+    title="Small machinery sourcing for water pumps, generators and compactors"
+    text="We help buyers source small power equipment, water pumps, generators, compactors and practical light industrial machines through suitable factory partners in China."
     image="/images/small-machinery-placeholder.jpg"
     imageAlt="Small machinery placeholder"
   />
 
-  <section class="section white">
+  <CategoryProfile
+    image="/images/small-machinery-placeholder.jpg"
+    imageAlt="Small machinery and power equipment"
+    clients={["Importers and regional distributors", "Agricultural and construction equipment buyers", "Wholesale and project procurement teams"]}
+    customization={["Model, power and voltage options", "Color, label and packaging requirements", "Accessories and spare-part configuration"]}
+    moq="MOQ depends on model, configuration, packaging and the selected factory partner."
+    packaging="Carton, pallet, accessory packing and shipping marks can be reviewed before order confirmation."
+    markets="Support for export-oriented orders, including buyers serving Brazil, Saudi Arabia and other markets where suitable."
+    rfqHint="Share the product type, required power or voltage, quantity, packaging expectation and destination market."
+  />
+
+  <section class="section">
     <div class="container split">
       <div class="content-block">
         <p class="eyebrow">Factory matching</p>
@@ -29,7 +41,7 @@ import PageHero from "../components/PageHero.astro";
         </p>
         <ul>
           <li>Small power equipment and light industrial machines</li>
-          <li>Generators, water pumps and related equipment categories</li>
+          <li>Generators, water pumps, compactors and related equipment categories</li>
           <li>OEM sourcing, model comparison and factory communication</li>
           <li>General support for markets such as Brazil, Saudi Arabia and other export markets</li>
         </ul>

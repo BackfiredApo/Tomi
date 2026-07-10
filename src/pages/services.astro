@@ -1,0 +1,81 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import PageHero from "../components/PageHero.astro";
+import { SERVICE_LINKS, SITE } from "../data/site";
+---
+
+<BaseLayout
+  title="China Sourcing Services | Tomi Trading"
+  description="Factory sourcing, OEM and ODM coordination, sample support, quality inspection and consolidated shipping support from Guangzhou, China."
+  image="/images/export-support-placeholder.jpg"
+>
+  <PageHero
+    eyebrow="Sourcing services"
+    title="Practical China sourcing support from requirement to shipping handover"
+    text="Tomi Trading helps overseas buyers organize the work around factory matching, OEM and ODM details, samples, quality coordination and consolidated shipping."
+    image="/images/export-support-placeholder.jpg"
+    imageAlt="Export and sourcing coordination"
+  />
+
+  <section class="section white">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">What we do</p>
+        <h2>Five ways we help keep an order understandable</h2>
+        <p class="lead">The exact scope depends on the product type, quantity and buyer requirements. We coordinate with factory and logistics partners where it makes sense for the project.</p>
+      </div>
+      <div class="service-grid full-width-services">
+        {SERVICE_LINKS.map((service) => (
+          <article class="service-tile">
+            <span>{service.number}</span>
+            <h3>{service.title}</h3>
+            <p>{service.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="content-block">
+        <p class="eyebrow">Working principle</p>
+        <h2>Clear information before broad promises</h2>
+        <p>
+          We do not assume every factory or inspection requirement is the same. The first
+          job is to clarify the product, target quantity, quality expectation, packaging and
+          destination market so the sourcing path is practical.
+        </p>
+        <ul>
+          <li>Factory partner matching based on product process and order needs</li>
+          <li>Sample review before production decisions where appropriate</li>
+          <li>Inspection scope and documentation arranged based on buyer requirements</li>
+          <li>Commercial invoice, packing list and forwarder handover coordination</li>
+        </ul>
+      </div>
+      <div class="service-side-note">
+        <p class="eyebrow">Start with one brief</p>
+        <h3>Useful first inputs</h3>
+        <ul class="compact-list">
+          <li>Drawing, sample photo or product link</li>
+          <li>Target quantity and buying schedule</li>
+          <li>Material, color, finish or specification</li>
+          <li>Packaging and destination market</li>
+        </ul>
+        <a class="button primary" href="/contact">Send an RFQ</a>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Need a China-side contact for your next sourcing project?"
+    text="Send the requirement by email, WhatsApp or the RFQ form and we will review the practical next step."
+    primaryLabel="Email Us"
+    primaryHref={`mailto:${SITE.email}`}
+    secondaryLabel="WhatsApp Us"
+    secondaryHref={SITE.whatsappUrl}
+  />
+  <ContactCTA />
+</BaseLayout>

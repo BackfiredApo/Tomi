@@ -4,186 +4,123 @@ import CTA from "../components/CTA.astro";
 import ContactCTA from "../components/ContactCTA.astro";
 import ProcessStep from "../components/ProcessStep.astro";
 import ServiceCard from "../components/ServiceCard.astro";
-import { RFQ_STEPS, SERVICE_LINKS } from "../data/site";
+import { PRODUCT_CATEGORIES, RFQ_STEPS, SERVICE_LINKS, SITE } from "../data/site";
 ---
 
 <BaseLayout
-  title="China Sourcing & Custom Manufacturing Partner | Tomi Trading"
-  description="Tomi Trading helps overseas buyers source CNC machining, sheet metal fabrication, small machinery, apparel and home storage products from factory partners in China."
+  title="Tomi Trading | China Supply Partner for Industrial & Consumer Products"
+  description="Tomi Trading is a Guangzhou sourcing partner for CNC machined parts, small machinery, home storage, automotive films and garments, with factory sourcing, sample, inspection and shipping support."
   image="/images/cnc-machining-placeholder.jpg"
 >
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">Guangzhou, China</p>
-        <h1>China Sourcing & Custom Manufacturing Partner</h1>
+        <p class="eyebrow">Guangzhou sourcing partner</p>
+        <h1>
+          <span class="hero-brand">Tomi Trading</span>
+          <span class="hero-statement">— Your China Supply Partner for Industrial Parts, Small Machinery, Home Storage &amp; Automotive Films.</span>
+        </h1>
         <p class="lead">
-          CNC machining, sheet metal fabrication, small machinery, apparel and home
-          storage products from reliable factory partners in China.
+          From Guangzhou and wider China, we help overseas buyers source practical industrial
+          and consumer products through suitable factory partners, with clear support from
+          factory matching to shipment coordination.
         </p>
         <div class="button-row">
-          <a class="button primary" href="/contact">Request a Quote</a>
-          <a class="button secondary" href="/contact">Contact Us</a>
+          <a class="button primary" href="/contact">Start an Inquiry</a>
+          <a class="button secondary" href={SITE.whatsappUrl}>WhatsApp Us</a>
         </div>
-        <div class="credibility-chips" aria-label="Core capabilities">
-          <span>CNC Machining</span>
-          <span>Sheet Metal</span>
-          <span>OEM / ODM</span>
-          <span>RFQ Support</span>
-          <span>Export Coordination</span>
+        <div class="credibility-chips" aria-label="Core sourcing services">
+          <span>Factory Sourcing</span>
+          <span>Sample Support</span>
+          <span>Inspection Coordination</span>
+          <span>Consolidated Shipping</span>
         </div>
       </div>
-      <div class="hero-panel">
+
+      <div class="hero-panel sourcing-panel">
         <div class="panel-topline">
-          <span>RFQ Coordination Desk</span>
-          <span>Guangzhou, China</span>
+          <span>Supply partner overview</span>
+          <span>{SITE.location}</span>
         </div>
         <div class="panel-main">
-          <p class="panel-kicker">Factory partner coordination</p>
-          <h2>Built for sourcing review, sampling and export follow-through.</h2>
+          <p class="panel-kicker">One practical point of contact</p>
+          <h2>Bring us a product brief. We will help make the next step clear.</h2>
           <p>
-            We help overseas buyers turn drawings, samples and product briefs into
-            clear manufacturing discussions with suitable factory partners.
+            Share a drawing, sample photo, target specification or buying list. We help
+            organize the sourcing conversation with appropriate factory partners.
           </p>
         </div>
-        <div class="capability-list">
-          <div class="capability-item">
-            <span class="capability-code">01</span>
-            <div>
-              <strong>Industrial Manufacturing</strong>
-              <p>CNC parts, sheet metal assemblies, small machinery and spare part sourcing.</p>
-            </div>
-          </div>
-          <div class="capability-item">
-            <span class="capability-code">02</span>
-            <div>
-              <strong>Consumer Products</strong>
-              <p>Apparel, home storage products, OEM packaging and export order support.</p>
-            </div>
-          </div>
+        <div class="sourcing-routes">
+          {PRODUCT_CATEGORIES.map((category, index) => (
+            <a href={category.href}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{category.title}</strong>
+            </a>
+          ))}
         </div>
-        <div class="hero-panel-footer">
+        <div class="hero-panel-footer sourcing-panel-footer">
           <div class="hero-stat">
-            <strong>2</strong>
-            <span>Supply chain directions</span>
+            <strong>01</strong>
+            <span>Share your requirement</span>
           </div>
           <div class="hero-stat">
-            <strong>RFQ</strong>
-            <span>Drawing or product brief</span>
+            <strong>02</strong>
+            <span>Review factory options</span>
           </div>
           <div class="hero-stat">
-            <strong>CN</strong>
-            <span>Factory partner network</span>
+            <strong>03</strong>
+            <span>Move toward sample or order</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section white">
+  <section class="mission-strip">
+    <div class="container mission-inner">
+      <p class="eyebrow">Our mission</p>
+      <p>{SITE.mission}</p>
+      <a href="/about">About Tomi Trading</a>
+    </div>
+  </section>
+
+  <section class="section white" id="product-categories">
     <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">What we support</p>
-        <h2>Two focused directions for overseas buyers</h2>
+      <div class="section-header products-header">
+        <p class="eyebrow">Product categories</p>
+        <h2>Five sourcing directions, with room for the right Guangzhou opportunity</h2>
         <p class="lead">
-          We keep the website simple because the work is practical: review the requirement,
-          match suitable factory partners, clarify quality expectations and support export
-          coordination.
+          These are the categories we present most clearly. For other practical sourcing
+          requests in Guangzhou and South China, send us the product brief and we will
+          assess whether the requirement is a good fit.
         </p>
       </div>
-      <div class="grid three">
-        {SERVICE_LINKS.map((service) => <ServiceCard {...service} />)}
+      <div class="category-grid">
+        {PRODUCT_CATEGORIES.map((category) => <ServiceCard {...category} />)}
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">Why work with Tomi Trading</p>
-        <h2>Practical sourcing support before and after quotation</h2>
-      </div>
-      <div class="grid three">
-        <article class="card feature-card">
-          <span class="mark">01</span>
-          <h3>Factory network in China</h3>
-          <p>We help identify suitable manufacturing partners based on category, process and order needs.</p>
-        </article>
-        <article class="card feature-card">
-          <span class="mark">02</span>
-          <h3>RFQ from limited inputs</h3>
-          <p>Start from one drawing, sample photo or product requirement and we will help clarify the next details.</p>
-        </article>
-        <article class="card feature-card">
-          <span class="mark">03</span>
-          <h3>DFM feedback</h3>
-          <p>For custom industrial parts, DFM comments can be coordinated with selected manufacturing partners.</p>
-        </article>
-        <article class="card feature-card">
-          <span class="mark">04</span>
-          <h3>Quality coordination</h3>
-          <p>Inspection and documentation support can be arranged depending on product type and buyer requirements.</p>
-        </article>
-        <article class="card feature-card">
-          <span class="mark">05</span>
-          <h3>Flexible order support</h3>
-          <p>We support prototype, spare part, small-batch and production order sourcing where feasible.</p>
-        </article>
-        <article class="card feature-card">
-          <span class="mark">06</span>
-          <h3>Export coordination</h3>
-          <p>Commercial documents, packing details and freight forwarder coordination can be handled with the order.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section white">
-    <div class="container split">
-      <div class="image-frame">
-        <img src="/images/sheet-metal-placeholder.jpg" alt="Sheet metal fabrication placeholder" loading="lazy" />
-      </div>
-      <div class="content-block">
-        <p class="eyebrow">Industrial manufacturing</p>
-        <h2>Custom parts and equipment sourcing for industrial buyers</h2>
+  <section class="section" id="sourcing-services">
+    <div class="container service-layout">
+      <div class="service-layout-copy">
+        <p class="eyebrow">How we support buyers</p>
+        <h2>More than a factory introduction</h2>
         <p>
-          We support overseas equipment manufacturers, automation companies, machinery
-          companies, agricultural equipment companies, automotive component companies and
-          industrial buyers that need practical sourcing support in China.
+          The useful work happens in the details: clarifying a requirement, comparing
+          practical options, coordinating samples, checking the agreed scope and preparing
+          the shipment handover.
         </p>
-        <ul>
-          <li>CNC precision machining, turning and custom metal components</li>
-          <li>Sheet metal panels, brackets, covers, cabinets and small assemblies</li>
-          <li>Small machinery, power equipment and light industrial products</li>
-        </ul>
-        <div class="button-row">
-          <a class="button primary" href="/industrial-manufacturing">Explore Industrial Manufacturing</a>
-        </div>
+        <a class="button text" href="/services">Explore sourcing services</a>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container split reverse">
-      <div class="content-block">
-        <p class="eyebrow">Consumer products</p>
-        <h2>OEM and ODM support for selected consumer product categories</h2>
-        <p>
-          We support apparel and home storage product sourcing, OEM/ODM production,
-          packaging coordination and export preparation for wholesalers, importers and
-          brand owners.
-        </p>
-        <ul>
-          <li>T-shirts, blanks, streetwear basics and custom apparel</li>
-          <li>Fabric storage boxes, closet organizers and household storage products</li>
-          <li>Packaging, label and carton information coordination</li>
-        </ul>
-        <div class="button-row">
-          <a class="button primary" href="/consumer-products">Explore Consumer Products</a>
-        </div>
-      </div>
-      <div class="image-frame">
-        <img src="/images/home-storage-placeholder.jpg" alt="Home storage product placeholder" loading="lazy" />
+      <div class="service-grid">
+        {SERVICE_LINKS.map((service) => (
+          <article class="service-tile">
+            <span>{service.number}</span>
+            <h3>{service.title}</h3>
+            <p>{service.text}</p>
+          </article>
+        ))}
       </div>
     </div>
   </section>
@@ -191,8 +128,39 @@ import { RFQ_STEPS, SERVICE_LINKS } from "../data/site";
   <section class="section white">
     <div class="container">
       <div class="section-header">
-        <p class="eyebrow">RFQ process</p>
-        <h2>A simple path from requirement to shipment support</h2>
+        <p class="eyebrow">Who we support</p>
+        <h2>Designed for buyers who need a responsive China-side partner</h2>
+      </div>
+      <div class="audience-grid">
+        <article>
+          <span>01</span>
+          <h3>Industrial buyers</h3>
+          <p>Equipment makers, project teams and importers sourcing parts, components or practical machinery.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Distributors</h3>
+          <p>Regional distributors comparing models, packaging and export-ready product options.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Brands &amp; wholesalers</h3>
+          <p>Teams building apparel, storage or other consumer product ranges with OEM details to manage.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Automotive film businesses</h3>
+          <p>PPF and color change film distributors or installers reviewing product and packaging requirements.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Simple working process</p>
+        <h2>Keep the purchasing conversation moving</h2>
       </div>
       <div class="process-grid">
         {RFQ_STEPS.map((step, index) => <ProcessStep number={index + 1} title={step.title} text={step.text} />)}
@@ -201,11 +169,12 @@ import { RFQ_STEPS, SERVICE_LINKS } from "../data/site";
   </section>
 
   <CTA
-    title="Send us one drawing, product photo or sourcing request."
-    text="We will check feasibility and reply with practical next steps for quotation, sampling or production."
-    primaryLabel="Send RFQ"
+    eyebrow="Ready to start?"
+    title="Tell us what you need to source from China."
+    text="A drawing, product photo, specification or buying list is enough to begin the conversation."
+    primaryLabel="Send an RFQ"
     secondaryLabel="WhatsApp Us"
-    secondaryHref="https://wa.me/8615817011257"
+    secondaryHref={SITE.whatsappUrl}
   />
   <ContactCTA />
 </BaseLayout>

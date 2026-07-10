@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactCTA from "../components/ContactCTA.astro";
+import CategoryProfile from "../components/CategoryProfile.astro";
 import PageHero from "../components/PageHero.astro";
 ---
 
@@ -17,7 +18,18 @@ import PageHero from "../components/PageHero.astro";
     imageAlt="Home storage products placeholder"
   />
 
-  <section class="section white">
+  <CategoryProfile
+    image="/images/home-storage-placeholder.jpg"
+    imageAlt="Home storage and organization products"
+    clients={["Wholesalers and importers", "Home organization brands", "Retail and e-commerce buying teams"]}
+    customization={["Material, dimensions and color", "Label, insert card and retail packaging", "Carton marking and assortment configuration"]}
+    moq="MOQ varies by material, item size, color count and packaging requirement."
+    packaging="OEM packaging, labels, polybags, carton size and loading information can be coordinated with factory partners."
+    markets="Suitable for wholesale and importer programs; destination-market packaging requirements should be shared early."
+    rfqHint="Send reference photos, dimensions, material preference, color count, target quantity and packaging idea."
+  />
+
+  <section class="section">
     <div class="container split">
       <div class="content-block">
         <p class="eyebrow">Product scope</p>

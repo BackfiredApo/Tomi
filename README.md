@@ -75,10 +75,13 @@ Replace these files with real factory, product, inspection or logistics photos w
 - `small-machinery-placeholder.jpg`
 - `apparel-placeholder.jpg`
 - `home-storage-placeholder.jpg`
+- `automotive-film-placeholder.svg`
 - `quality-inspection-placeholder.jpg`
 - `export-support-placeholder.jpg`
 
 Keep the same filenames to avoid changing page code. Recommended image ratio is 4:3 or 16:10, with a width of at least 1200px. Use original photos you own or have permission to use. Do not use copyrighted brand logos, fake customer logos or images that imply certifications you do not have.
+
+The automotive film image is a temporary unbranded visual placeholder. Replace it with your own PPF / TPU color change film product or factory photo before using the site for a full sales campaign.
 
 ## Contact Form Behavior
 

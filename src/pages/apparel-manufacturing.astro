@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactCTA from "../components/ContactCTA.astro";
+import CategoryProfile from "../components/CategoryProfile.astro";
 import PageHero from "../components/PageHero.astro";
 ---
 
@@ -11,13 +12,24 @@ import PageHero from "../components/PageHero.astro";
 >
   <PageHero
     eyebrow="Apparel manufacturing"
-    title="OEM and ODM apparel manufacturing support"
-    text="We support T-shirts, blanks, streetwear basics and custom apparel sourcing with fabric, size, color, sample and bulk order coordination."
+    title="Garment sourcing for T-shirts, hoodies, pants and jeans"
+    text="We support T-shirts, hoodies, pants, jeans, blanks and everyday apparel with fabric, size, color, sample and bulk order coordination."
     image="/images/apparel-placeholder.jpg"
     imageAlt="Apparel manufacturing placeholder"
   />
 
-  <section class="section white">
+  <CategoryProfile
+    image="/images/apparel-placeholder.jpg"
+    imageAlt="Garment sourcing and apparel production"
+    clients={["Clothing brands and private-label buyers", "Wholesalers and retail buying teams", "Streetwear and basic apparel programs"]}
+    customization={["Fabric, weight and wash", "Size range, colorway and fit", "Label, print, embroidery and packaging"]}
+    moq="MOQ depends on fabric, style complexity, colorway count and selected manufacturing partner."
+    packaging="Hangtags, labels, polybags, folding method, carton assortment and shipping marks can be discussed before production."
+    markets="Suitable for overseas brands, wholesalers and importers; buyer specifications should include destination-market needs."
+    rfqHint="A tech pack is ideal. A reference photo with fabric, size range, target quantity and packaging idea is also a helpful start."
+  />
+
+  <section class="section">
     <div class="container split">
       <div class="content-block">
         <p class="eyebrow">Clothing sourcing</p>
@@ -28,7 +40,7 @@ import PageHero from "../components/PageHero.astro";
           details with suitable manufacturing partners.
         </p>
         <ul>
-          <li>T-shirts, blanks, streetwear basics and custom apparel</li>
+          <li>T-shirts, hoodies, pants, jeans, blanks and custom apparel</li>
           <li>OEM/ODM production and style development coordination</li>
           <li>Fabric sourcing and material option communication</li>
           <li>Size, color, label and packaging coordination</li>

@@ -1,0 +1,59 @@
+---
+interface Props {
+  image: string;
+  imageAlt: string;
+  clients: string[];
+  customization: string[];
+  moq: string;
+  packaging: string;
+  markets: string;
+  rfqHint: string;
+}
+
+const { image, imageAlt, clients, customization, moq, packaging, markets, rfqHint } = Astro.props;
+---
+
+<section class="section white category-profile">
+  <div class="container split">
+    <div class="image-frame category-image">
+      <img src={image} alt={imageAlt} loading="lazy" />
+    </div>
+    <div class="content-block">
+      <p class="eyebrow">Sourcing profile</p>
+      <h2>Built around your product brief and target market</h2>
+      <div class="profile-columns">
+        <div>
+          <h3>Suitable for</h3>
+          <ul class="compact-list">
+            {clients.map((client) => <li>{client}</li>)}
+          </ul>
+        </div>
+        <div>
+          <h3>Common customization</h3>
+          <ul class="compact-list">
+            {customization.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      </div>
+      <dl class="sourcing-facts">
+        <div>
+          <dt>MOQ</dt>
+          <dd>{moq}</dd>
+        </div>
+        <div>
+          <dt>Packaging</dt>
+          <dd>{packaging}</dd>
+        </div>
+        <div>
+          <dt>Export markets</dt>
+          <dd>{markets}</dd>
+        </div>
+      </dl>
+      <p class="rfq-hint"><strong>Helpful RFQ detail:</strong> {rfqHint}</p>
+      <div class="button-row">
+        <a class="button primary" href="/contact">Request a Quote</a>
+        <a class="button secondary" href="https://wa.me/8615817011257">Discuss on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>

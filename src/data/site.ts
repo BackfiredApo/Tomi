@@ -6,54 +6,81 @@ export const SITE = {
   email: "sales@tomitrading.com",
   whatsappDisplay: "+86 15817011257",
   whatsappUrl: "https://wa.me/8615817011257",
-  location: "Guangzhou, China"
+  location: "Guangzhou, China",
+  mission: "Make China sourcing clearer, more practical and easier to manage for overseas buyers."
 };
 
 export const NAV_ITEMS = [
   { label: "Home", href: "/" },
-  { label: "Industrial Manufacturing", href: "/industrial-manufacturing" },
-  { label: "Consumer Products", href: "/consumer-products" },
+  { label: "Products", href: "/#product-categories" },
+  { label: "Services", href: "/services" },
   { label: "Quality", href: "/quality-inspection" },
-  { label: "Export Support", href: "/export-support" },
   { label: "Contact", href: "/contact" }
+];
+
+export const PRODUCT_CATEGORIES = [
+  {
+    title: "CNC Machined Parts",
+    text: "Custom brackets, shafts, bushings, flanges and precision metal components through selected manufacturing partners.",
+    href: "/cnc-machining",
+    image: "/images/cnc-machining-placeholder.jpg",
+    meta: "Industrial parts"
+  },
+  {
+    title: "Small Machinery",
+    text: "Water pumps, generators, compactors and practical equipment sourcing for importers and distributors.",
+    href: "/small-machinery-power-equipment",
+    image: "/images/small-machinery-placeholder.jpg",
+    meta: "Power equipment"
+  },
+  {
+    title: "Home Storage Products",
+    text: "Storage boxes, organizers and household storage product sourcing with packaging coordination.",
+    href: "/home-storage-products",
+    image: "/images/home-storage-placeholder.jpg",
+    meta: "Consumer goods"
+  },
+  {
+    title: "PPF & TPU Color Change Film",
+    text: "Paint protection film and color change film sourcing for automotive film distributors and installers.",
+    href: "/automotive-films",
+    image: "/images/automotive-film-placeholder.svg",
+    meta: "Automotive films"
+  },
+  {
+    title: "Garments",
+    text: "T-shirts, hoodies, pants, jeans and everyday apparel with OEM and private-label coordination.",
+    href: "/apparel-manufacturing",
+    image: "/images/apparel-placeholder.jpg",
+    meta: "Apparel sourcing"
+  }
 ];
 
 export const SERVICE_LINKS = [
   {
-    title: "CNC Machining",
-    text: "Precision-machined aluminum, steel and stainless-steel parts through selected manufacturing partners.",
-    href: "/cnc-machining",
-    image: "/images/cnc-machining-placeholder.jpg"
+    number: "01",
+    title: "Factory Sourcing",
+    text: "Match product requirements with suitable factory partners in Guangzhou and wider China."
   },
   {
-    title: "Sheet Metal Fabrication",
-    text: "Laser cutting, bending, welding, riveting and surface treatment support for industrial parts.",
-    href: "/sheet-metal-fabrication",
-    image: "/images/sheet-metal-placeholder.jpg"
+    number: "02",
+    title: "OEM & ODM Support",
+    text: "Coordinate specifications, materials, finishes, colors, labels and packaging requirements."
   },
   {
-    title: "Small Machinery",
-    text: "Factory matching for small power equipment, pumps, generators and light industrial machines.",
-    href: "/small-machinery-power-equipment",
-    image: "/images/small-machinery-placeholder.jpg"
+    number: "03",
+    title: "Sample Support",
+    text: "Organize sample review and clarify practical details before a bulk production decision."
   },
   {
-    title: "Apparel Manufacturing",
-    text: "OEM and ODM support for T-shirts, blanks, streetwear basics and custom apparel.",
-    href: "/apparel-manufacturing",
-    image: "/images/apparel-placeholder.jpg"
+    number: "04",
+    title: "Quality Inspection",
+    text: "Arrange inspection scope and supporting documentation based on product and buyer requirements."
   },
   {
-    title: "Home Storage Products",
-    text: "Sourcing for fabric storage boxes, organizers, household storage and OEM packaging.",
-    href: "/home-storage-products",
-    image: "/images/home-storage-placeholder.jpg"
-  },
-  {
-    title: "Export Support",
-    text: "Commercial documents, carton information, forwarder coordination and shipping support.",
-    href: "/export-support",
-    image: "/images/export-support-placeholder.jpg"
+    number: "05",
+    title: "Consolidated Shipping",
+    text: "Coordinate carton information, export documents and freight forwarder handover for multi-supplier orders."
   }
 ];
 
@@ -90,6 +117,8 @@ export const PAGE_URLS = [
   "/consumer-products",
   "/apparel-manufacturing",
   "/home-storage-products",
+  "/automotive-films",
+  "/services",
   "/quality-inspection",
   "/export-support",
   "/contact"

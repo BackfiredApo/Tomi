@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Automotive film sourcing placeholder</title>
+  <desc id="desc">A stylized automotive film roll and vehicle panel for temporary website use.</desc>
+  <rect width="1600" height="1000" fill="#e9efed"/>
+  <rect x="86" y="82" width="1428" height="836" fill="#f7faf9" stroke="#bfcfca" stroke-width="4"/>
+  <path d="M118 744H1482" stroke="#c9d7d3" stroke-width="4"/>
+  <path d="M876 356c106-138 332-147 453-16l85 132H736z" fill="#1d2c35"/>
+  <path d="M803 484h617l-44 117H759z" fill="#304852"/>
+  <circle cx="899" cy="624" r="74" fill="#16242d"/>
+  <circle cx="899" cy="624" r="42" fill="#dbe6e3"/>
+  <circle cx="1278" cy="624" r="74" fill="#16242d"/>
+  <circle cx="1278" cy="624" r="42" fill="#dbe6e3"/>
+  <path d="M420 700c0-111 78-201 190-201h64c111 0 190 90 190 201s-79 201-190 201h-64c-112 0-190-90-190-201z" fill="#f5f8f7" stroke="#2d687b" stroke-width="18"/>
+  <ellipse cx="556" cy="700" rx="49" ry="200" fill="#dce8e4" stroke="#2d687b" stroke-width="14"/>
+  <path d="M610 506c100 27 171 105 171 194s-71 167-171 194" fill="none" stroke="#b46d40" stroke-width="12"/>
+  <path d="M284 276h400" stroke="#2d687b" stroke-width="8"/>
+  <path d="M284 305h272" stroke="#bfcfca" stroke-width="8"/>
+  <text x="284" y="404" fill="#16242d" font-family="Arial, sans-serif" font-size="56" font-weight="700">AUTOMOTIVE FILMS</text>
+  <text x="284" y="456" fill="#647176" font-family="Arial, sans-serif" font-size="27" letter-spacing="5">PPF / TPU COLOR CHANGE FILM</text>
+</svg>
