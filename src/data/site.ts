@@ -23,21 +23,21 @@ export const PRODUCT_CATEGORIES = [
     title: "CNC Machined Parts",
     text: "Brackets, shafts, bushings, flanges and custom metal parts.",
     href: "/cnc-machining",
-    image: "/images/cnc-machining-placeholder.jpg",
+    image: "/images/cnc-machined-parts-visual.jpg",
     meta: "Industrial parts"
   },
   {
     title: "Small Machinery",
     text: "Water pumps, generators and compactors.",
     href: "/small-machinery-power-equipment",
-    image: "/images/small-machinery-placeholder.jpg",
+    image: "/images/small-machinery-visual.jpg",
     meta: "Power equipment"
   },
   {
     title: "Home Storage Products",
     text: "Storage boxes, organizers and household storage.",
     href: "/home-storage-products",
-    image: "/images/home-storage-placeholder.jpg",
+    image: "/images/home-storage-products-visual.jpg",
     meta: "Consumer goods"
   },
   {
@@ -51,7 +51,7 @@ export const PRODUCT_CATEGORIES = [
     title: "Garments",
     text: "T-shirts, hoodies, pants and jeans.",
     href: "/apparel-manufacturing",
-    image: "/images/apparel-placeholder.jpg",
+    image: "/images/garments-visual.jpg",
     meta: "Apparel sourcing"
   }
 ];

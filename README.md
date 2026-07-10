@@ -70,17 +70,17 @@ public/images
 
 Replace these files with approved product, city, packaging or logistics photos when available:
 
-- `cnc-machining-placeholder.jpg`
-- `sheet-metal-placeholder.jpg`
-- `small-machinery-placeholder.jpg`
-- `apparel-placeholder.jpg`
-- `home-storage-placeholder.jpg`
+- `cnc-machined-parts-visual.jpg`
+- `sheet-metal-fabrication-visual.jpg`
+- `small-machinery-visual.jpg`
+- `garments-visual.jpg`
+- `home-storage-products-visual.jpg`
 - `automotive-film-placeholder.jpg`
 - `quality-inspection-placeholder.jpg`
 - `export-support-placeholder.jpg`
 - `guangzhou-skyline-hero.jpg`
 
-Keep the same filenames to avoid changing page code. Recommended image ratio is 4:3 or 16:10, with a width of at least 1200px. Use original photos you own or have permission to use. Do not use copyrighted brand logos, fake customer logos or images that imply certifications you do not have.
+Recommended image ratio is 4:3 or 16:10, with a width of at least 1200px. Use original photos you own or have permission to use. Do not use copyrighted brand logos, fake customer logos or images that imply certifications you do not have.
 
 The Guangzhou skyline and product images are temporary unbranded commercial visuals. Replace each one with your own approved product photography when available. Do not display certification marks or certificate scans until you have the real documents and permission to publish them.
 
