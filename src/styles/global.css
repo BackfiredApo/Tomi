@@ -1401,3 +1401,176 @@ textarea:focus {
     border-left: 1px solid rgba(255, 255, 255, 0.25);
   }
 }
+
+/* Homepage: one clear message over a real Guangzhou visual. */
+.hero-city {
+  display: grid;
+  min-height: 650px;
+  align-items: end;
+  border-bottom: 0;
+  background-image: url("/images/guangzhou-skyline-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+}
+
+.hero-city::before {
+  display: none;
+}
+
+.hero-city-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 21, 31, 0.5);
+}
+
+.hero-city-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  max-width: 760px;
+  gap: 17px;
+  padding: 124px 0 92px;
+}
+
+.hero-city .eyebrow {
+  color: #b9d7e2;
+}
+
+.hero-wordmark {
+  color: #ffffff;
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  font-weight: 780;
+}
+
+.hero-city h1 {
+  max-width: 680px;
+  color: #ffffff;
+  font-size: clamp(2.8rem, 5.3vw, 5rem);
+  line-height: 1.02;
+}
+
+.hero-city .lead {
+  max-width: 630px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1.04rem, 1.45vw, 1.2rem);
+}
+
+.button.secondary.light {
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.button.secondary.light:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hero-trust-line {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.84rem;
+  font-weight: 680;
+}
+
+.statement-section {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.statement-grid {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 38px;
+}
+
+.statement-grid .eyebrow {
+  margin-top: 7px;
+}
+
+.statement-grid h2 {
+  max-width: 720px;
+}
+
+.statement-grid p:not(.eyebrow) {
+  max-width: 670px;
+  margin-top: 16px;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}
+
+.product-summary {
+  max-width: 940px;
+}
+
+.category-profile .content-block {
+  gap: 22px;
+}
+
+.compact-service-layout {
+  align-items: center;
+}
+
+.compact-process-section {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mini-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.mini-process-grid article {
+  border-top: 2px solid var(--color-signal);
+  padding-top: 16px;
+}
+
+.mini-process-grid span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-signal);
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 681px) {
+  .quick-contact {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero-city {
+    min-height: 580px;
+    background-position: 58% center;
+  }
+
+  .hero-city-content {
+    gap: 15px;
+    padding: 94px 0 78px;
+  }
+
+  .hero-city h1 {
+    font-size: clamp(2.65rem, 12vw, 3.75rem);
+  }
+
+  .hero-trust-line {
+    font-size: 0.79rem;
+  }
+
+  .statement-grid,
+  .mini-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .statement-grid {
+    gap: 4px;
+  }
+
+  .mini-process-grid {
+    gap: 18px;
+  }
+}

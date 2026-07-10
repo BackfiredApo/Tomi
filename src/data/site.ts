@@ -44,7 +44,7 @@ export const PRODUCT_CATEGORIES = [
     title: "PPF & TPU Color Change Film",
     text: "Paint protection film and color change film sourcing for automotive film distributors and installers.",
     href: "/automotive-films",
-    image: "/images/automotive-film-placeholder.svg",
+    image: "/images/automotive-film-placeholder.jpg",
     meta: "Automotive films"
   },
   {

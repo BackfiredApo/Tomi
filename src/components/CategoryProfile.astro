@@ -1,7 +1,5 @@
 ---
 interface Props {
-  image: string;
-  imageAlt: string;
   clients: string[];
   customization: string[];
   moq: string;
@@ -10,17 +8,14 @@ interface Props {
   rfqHint: string;
 }
 
-const { image, imageAlt, clients, customization, moq, packaging, markets, rfqHint } = Astro.props;
+const { clients, customization, moq, packaging, markets, rfqHint } = Astro.props;
 ---
 
 <section class="section white category-profile">
-  <div class="container split">
-    <div class="image-frame category-image">
-      <img src={image} alt={imageAlt} loading="lazy" />
-    </div>
+  <div class="container product-summary">
     <div class="content-block">
-      <p class="eyebrow">Sourcing profile</p>
-      <h2>Built around your product brief and target market</h2>
+      <p class="eyebrow">Product overview</p>
+      <h2>Product options, made clear.</h2>
       <div class="profile-columns">
         <div>
           <h3>Suitable for</h3>
