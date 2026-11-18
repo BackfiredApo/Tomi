@@ -1,34 +1,35 @@
 ---
 import { NAV_ITEMS, SITE } from "../data/site";
+import { PRODUCT_RANGES, inquiryHref } from "../data/capabilities";
 
-const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
+const normalise = (path: string) => path.replace(/\/$/, "") || "/";
+const pathname = normalise(Astro.url.pathname);
+const isProduct = PRODUCT_RANGES.some((range) => pathname === normalise(range.href));
+const navState = (href: string) => pathname === normalise(href) ? "page" : undefined;
 ---
 
 <header class="site-header">
-  <div class="container header-inner">
+  <div class="wide-container header-inner">
     <a class="logo" href="/" aria-label={`${SITE.brandName} home`}>
-      <span class="logo-mark" aria-hidden="true"></span>
+      <span class="logo-mark" aria-hidden="true">T</span>
       <span class="logo-copy">
         <strong>{SITE.brandName}</strong>
-        <span>China supply partner</span>
+        <span>China Supply</span>
       </span>
     </a>
 
     <nav class="nav" aria-label="Main navigation">
       {
-        NAV_ITEMS.map((item) => {
-          const itemPath = item.href.replace(/\/$/, "") || "/";
-          return (
-            <a href={item.href} aria-current={pathname === itemPath ? "page" : undefined}>
-              {item.label}
-            </a>
-          );
-        })
+        NAV_ITEMS.map((item) => (
+          <a href={item.href} aria-current={navState(item.href)} class:list={[{ "nav-section": isProduct && item.label === "Products" }]}>
+            {item.label}
+          </a>
+        ))
       }
     </nav>
 
     <div class="desktop-actions">
-      <a class="button primary" href="/contact">Start an Inquiry</a>
+      <a class="site-action dark-action" href={inquiryHref()}>Start an inquiry <span aria-hidden="true">↗</span></a>
     </div>
 
     <details class="mobile-menu">
@@ -36,12 +37,12 @@ const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
       <nav aria-label="Mobile navigation">
         {
           NAV_ITEMS.map((item) => (
-            <a href={item.href}>
+            <a href={item.href} aria-current={navState(item.href)}>
               {item.label}
             </a>
           ))
         }
-        <a class="button primary" href="/contact">Start an Inquiry</a>
+        <a class="site-action dark-action" href={inquiryHref()}>Start an inquiry <span aria-hidden="true">↗</span></a>
       </nav>
     </details>
   </div>

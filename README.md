@@ -60,6 +60,34 @@ You can update:
 
 Important: the current site intentionally shows only `Guangzhou, China` as the location. Do not add a full company address unless you want it to appear publicly.
 
+## Update Product Ranges and Catalogues
+
+The homepage, `/products/` and the main range pages share `src/data/capabilities.ts`.
+Store approved public downloads in `public/catalogues/`. The range pages link to the RFQ form with the relevant category preselected.
+Optimized product imagery is in `public/images/ranges/`.
+
+The five range covers in `public/images/ranges/` are 720 × 480 WebP illustrations generated with the built-in ImageGen tool. The catalogue PDFs retain their product photographs.
+
+<details>
+<summary>Range cover prompts</summary>
+
+Shared prompt for CNC, pet toys, cables and films:
+
+> Create one photorealistic editorial product render for a B2B manufacturing website's 'Product ranges' cover series. Landscape 3:2 composition. Palette and art direction fixed across the entire series: seamless warm light gray limestone / oatmeal background (#e9e5db), soft muted sage green accents (#778978), graphite, ivory or brushed silver, understated contrast and low saturation. Use a continuous matte limestone studio surface, large diffused daylight from the top left, soft natural shadows extending to the lower right, elevated 35-degree camera angle, medium close-up, refined modern industrial catalog photography. Place the entire main grouping inside the central 75 percent with quiet margins, filling the frame without cutting off the objects. Make the range immediately legible at a small crop. No text of any kind, no logos, no labels, no watermarks, no people, no visual borders, no graphics. Only the specified objects.
+
+Subject directions:
+
+- `cnc.webp`: three custom precision-machined parts on the surface. One substantial brushed-aluminium flanged bearing housing, one short turned steel shaft with machined grooves, one compact angled machined bracket with mounting holes. Artfully grouped in one composition, brushed grain and complex tool marks legible, no oily workshop background.
+- `pet-toys.webp`: three recognisable dog training and interactive-play toys. A dark sage textured EVA ball attached to a neatly looped off-white braided rope, a desaturated warm clay EVA tug ring and an ivory flying disc, subtly overlapping in a simple grouping on the same warm light gray limestone surface. Realistic molded foam texture, simple safe-looking product silhouettes with no literal paw icons or text.
+- `cables.webp`: two commercial data cables, each with a legible connector facing the camera. One standard clear 8P8C/RJ45 Ethernet plug with gold contacts and graphite strain relief attached to a dark neatly looped cable, and one symmetrical USB-C metal male connector with a sage molded grip and a short neatly looped sage cable. Realistic balanced proportions, two distinct cable types, no patterns or accessories.
+- `films.webp`: three rolls of plain professional automotive film, a translucent clear paint protection film roll, a smoke-gray matte roll, and a muted sage satin colour-change film roll. Show natural film reflections and a short unfolded edge from one roll, clustered on the same warm gray limestone surface with understated graphite cores. No car, foil labels, shiny rainbow colors or installation tools.
+
+Apparel prompt:
+
+> Create one photorealistic editorial product render for a B2B manufacturing website's 'Product ranges' cover series. Landscape 3:2 composition. Fixed art direction: seamless warm light gray limestone / oatmeal background (#e9e5db), muted sage (#778978), graphite and ivory, low saturation and understated contrast. Continuous matte limestone studio surface, large diffused daylight from top left and soft natural shadows lower right, elevated 35-degree camera angle, medium close-up, refined modern industrial catalog photography. Subject: folded cream short-sleeve crewneck T-shirt, sage hooded sweatshirt with the hood clearly visible, charcoal work trousers with a cargo/tool pocket, and a smaller ivory and sage children's two-piece set, neatly arranged in a compact group of four with believable scale and no clutter. Make the necklines, hood and cargo pocket easy to recognise at card size. Main grouping inside central 75 percent. No labels, graphics, lettering, logo, watermarks, borders, people or accessories.
+
+</details>
+
 ## Replace Placeholder Images
 
 The replaceable placeholder images are stored in:

@@ -1,18 +1,22 @@
 :root {
-  --color-primary: #16242d;
-  --color-primary-strong: #0d171e;
-  --color-accent: #b46d40;
-  --color-signal: #2d687b;
-  --color-background: #f4f6f5;
+  --color-primary: #172b46;
+  --color-primary-strong: #0d1625;
+  --color-signal: #2b507a;
+  --color-background: #ffffff;
   --color-surface: #ffffff;
-  --color-text: #1d292f;
-  --color-muted: #647176;
-  --color-border: #dbe2e1;
-  --color-soft: #e9efed;
-  --shadow-soft: 0 18px 42px rgba(22, 36, 45, 0.11);
-  --shadow-card: 0 10px 26px rgba(22, 36, 45, 0.06);
-  --radius: 7px;
-  --container: 1160px;
+  --color-text: #202c3e;
+  --color-muted: #4b5c71;
+  --color-border: #d9e0ea;
+  --color-soft: #f3f6fa;
+  --color-accent-soft: #e4edf8;
+  --color-on-dark-muted: #dbe5f2;
+  --color-field-border: #7c899c;
+  --shadow-soft: 0 12px 28px rgb(13 22 37 / .10);
+  --shadow-card: none;
+  --radius: 6px;
+  --container: 84rem;
+  --gutter: clamp(1rem, 3.5vw, 3.5rem);
+  --font-display: Georgia, "Times New Roman", serif;
 }
 
 * {
@@ -34,7 +38,7 @@ body {
 }
 
 ::selection {
-  background: rgba(45, 104, 123, 0.2);
+  background: var(--color-accent-soft);
 }
 
 img {
@@ -63,13 +67,13 @@ textarea {
   flex: 1;
 }
 
-.container {
-  width: min(100% - 40px, var(--container));
+.container, .wide-container {
+  inline-size: min(calc(100% - 2 * var(--gutter)), var(--container));
   margin-inline: auto;
 }
 
 .section {
-  padding: 88px 0;
+  padding: clamp(3.25rem, 6vw, 5.5rem) 0;
 }
 
 .section.tight {
@@ -78,7 +82,7 @@ textarea {
 
 .section.white {
   background: var(--color-surface);
-  border-block: 1px solid rgba(219, 226, 225, 0.85);
+  border-block: 1px solid var(--color-border);
 }
 
 .section-header {
@@ -94,7 +98,7 @@ textarea {
   margin: 0 0 10px;
   color: var(--color-signal);
   font-size: 0.73rem;
-  font-weight: 850;
+  font-weight: 720;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -110,17 +114,22 @@ h3 {
 h1 {
   max-width: 820px;
   font-size: clamp(2.3rem, 4.15vw, 4rem);
-  font-weight: 840;
 }
 
 h2 {
-  font-size: clamp(1.75rem, 3vw, 2.7rem);
-  font-weight: 820;
+  font-size: clamp(1.9rem, 3.4vw, 3.15rem);
+}
+
+h1, h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -.039em;
+  text-wrap: balance;
 }
 
 h3 {
   font-size: 1.12rem;
-  font-weight: 820;
+  font-weight: 700;
 }
 
 p {
@@ -149,12 +158,12 @@ p {
   justify-content: center;
   gap: 8px;
   border: 1px solid transparent;
-  border-radius: 5px;
+  border-radius: var(--radius);
   padding: 12px 18px;
   color: inherit;
   cursor: pointer;
   font-size: 0.94rem;
-  font-weight: 820;
+  font-weight: 700;
   line-height: 1.1;
   text-align: center;
   text-decoration: none;
@@ -169,7 +178,6 @@ p {
   border-color: var(--color-primary);
   background: var(--color-primary);
   color: #ffffff;
-  box-shadow: 0 10px 22px rgba(22, 36, 45, 0.16);
 }
 
 .button.primary:hover {
@@ -178,14 +186,14 @@ p {
 }
 
 .button.secondary {
-  border-color: #cfd9d6;
-  background: rgba(255, 255, 255, 0.88);
+  border-color: var(--color-border);
+  background: var(--color-surface);
   color: var(--color-primary);
 }
 
 .button.secondary:hover {
-  border-color: rgba(45, 104, 123, 0.58);
-  background: #ffffff;
+  border-color: var(--color-signal);
+  background: var(--color-soft);
 }
 
 .button.bronze {
@@ -195,8 +203,8 @@ p {
 }
 
 .button.bronze:hover {
-  border-color: #214f5e;
-  background: #214f5e;
+  border-color: var(--color-primary);
+  background: var(--color-primary);
 }
 
 .button.text {
@@ -219,9 +227,8 @@ p {
   position: sticky;
   top: 0;
   z-index: 30;
-  border-bottom: 1px solid rgba(219, 226, 225, 0.95);
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-background);
 }
 
 .header-inner {
@@ -344,7 +351,7 @@ p {
   position: relative;
   overflow: hidden;
   padding: 82px 0 88px;
-  border-bottom: 1px solid rgba(219, 226, 225, 0.95);
+  border-bottom: 1px solid var(--color-border);
   background: var(--color-background);
 }
 
@@ -484,8 +491,8 @@ p {
 }
 
 .sourcing-routes a:hover {
-  border-color: rgba(45, 104, 123, 0.55);
-  background: #f8fbfa;
+  border-color: var(--color-signal);
+  background: var(--color-soft);
 }
 
 .sourcing-routes a span {
@@ -505,7 +512,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--color-border);
-  background: #f8faf9;
+  background: var(--color-soft);
 }
 
 .hero-stat {
@@ -548,7 +555,7 @@ p {
 
 .mission-inner .eyebrow {
   margin: 0;
-  color: #a9cad5;
+  color: var(--color-on-dark-muted);
 }
 
 .mission-inner > p:not(.eyebrow) {
@@ -646,7 +653,7 @@ p {
 }
 
 .service-card:hover {
-  border-color: rgba(45, 104, 123, 0.55);
+  border-color: var(--color-signal);
   box-shadow: var(--shadow-soft);
   transform: translateY(-2px);
 }
@@ -720,7 +727,7 @@ p {
   height: 35px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(45, 104, 123, 0.28);
+  border: 1px solid var(--color-border);
   border-radius: 5px;
   background: var(--color-soft);
   color: var(--color-signal);
@@ -889,7 +896,7 @@ p {
 }
 
 .cta-band .eyebrow {
-  color: #a9cad5;
+  color: var(--color-on-dark-muted);
 }
 
 .cta-band p {
@@ -917,7 +924,7 @@ p {
 .contact-cta {
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
-  background: var(--color-background);
+  background: var(--color-soft);
 }
 
 .contact-card {
@@ -925,7 +932,6 @@ p {
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 28px;
-  border-left: 4px solid var(--color-signal);
   padding: 32px;
 }
 
@@ -965,7 +971,7 @@ p {
 
 .sourcing-facts > div {
   border-top: 2px solid var(--color-signal);
-  background: #f8faf9;
+  background: var(--color-soft);
   padding: 14px 13px;
 }
 
@@ -986,7 +992,7 @@ p {
 }
 
 .rfq-hint {
-  border-left: 3px solid var(--color-accent);
+  border-left: 3px solid var(--color-signal);
   padding-left: 13px;
   color: var(--color-muted);
 }
@@ -1003,6 +1009,10 @@ p {
   background: var(--color-surface);
   box-shadow: var(--shadow-card);
   padding: 28px;
+}
+
+.contact-layout {
+  align-items: start;
 }
 
 .contact-details {
@@ -1041,9 +1051,9 @@ input,
 select,
 textarea {
   width: 100%;
-  border: 1px solid var(--color-border);
-  border-radius: 5px;
-  background: #ffffff;
+  border: 1px solid var(--color-field-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
   color: var(--color-text);
   padding: 12px 13px;
 }
@@ -1057,7 +1067,8 @@ input:focus,
 select:focus,
 textarea:focus {
   border-color: var(--color-signal);
-  outline: 3px solid rgba(45, 104, 123, 0.19);
+  outline: 2px solid var(--color-signal);
+  outline-offset: 2px;
 }
 
 .note {
@@ -1072,7 +1083,7 @@ textarea:focus {
   z-index: 32;
   display: grid;
   overflow: hidden;
-  border: 1px solid rgba(22, 36, 45, 0.2);
+  border: 1px solid var(--color-border);
   border-radius: 6px;
   background: #ffffff;
   box-shadow: var(--shadow-soft);
@@ -1094,7 +1105,7 @@ textarea:focus {
 }
 
 .site-footer {
-  border-top: 4px solid var(--color-signal);
+  border-top: 1px solid var(--color-signal);
   background: var(--color-primary-strong);
   color: rgba(255, 255, 255, 0.75);
   padding: 56px 0 24px;
@@ -1273,9 +1284,6 @@ textarea:focus {
     padding-bottom: 54px;
   }
 
-  .container {
-    width: min(100% - 24px, var(--container));
-  }
 
   .section {
     padding: 60px 0;
@@ -1407,8 +1415,9 @@ textarea:focus {
 .hero-city {
   display: grid;
   min-height: 650px;
-  align-items: end;
+  align-items: center;
   border-bottom: 0;
+  background-color: #172b40;
   background-image: url("/images/guangzhou-skyline-hero.jpg");
   background-position: center;
   background-size: cover;
@@ -1431,11 +1440,11 @@ textarea:focus {
   display: grid;
   max-width: 760px;
   gap: 17px;
-  padding: 124px 0 92px;
+  padding: 5rem 0;
 }
 
 .hero-city .eyebrow {
-  color: #b9d7e2;
+  color: var(--color-on-dark-muted);
 }
 
 .hero-wordmark {
@@ -1551,7 +1560,7 @@ textarea:focus {
 
   .hero-city-content {
     gap: 15px;
-    padding: 94px 0 78px;
+    padding: 3.5rem 0;
   }
 
   .hero-city h1 {

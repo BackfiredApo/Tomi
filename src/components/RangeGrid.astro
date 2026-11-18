@@ -1,0 +1,20 @@
+---
+import { PRODUCT_RANGES } from "../data/capabilities";
+---
+
+<ul class="range-grid">
+  {PRODUCT_RANGES.map((range) => (
+    <li class="range-cell">
+      <article class="range-card">
+        <div class="range-cover">
+          <img src={range.image} alt={range.imageAlt} width="720" height="480" loading="lazy" decoding="async" />
+        </div>
+        <div class="range-card-copy">
+          <h3><a href={range.href}>{range.title}</a></h3>
+          <p>{range.summary}</p>
+          <span class="range-arrow" aria-hidden="true">↗</span>
+        </div>
+      </article>
+    </li>
+  ))}
+</ul>

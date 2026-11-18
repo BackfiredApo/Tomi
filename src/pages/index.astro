@@ -1,105 +1,55 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CTA from "../components/CTA.astro";
-import ServiceCard from "../components/ServiceCard.astro";
-import { PRODUCT_CATEGORIES, SERVICE_LINKS, SITE } from "../data/site";
+import RangeGrid from "../components/RangeGrid.astro";
+import { inquiryHref } from "../data/capabilities";
 
 const steps = [
-  { number: "01", title: "Share the requirement" },
-  { number: "02", title: "Review product options" },
-  { number: "03", title: "Confirm the next step" }
+  { title: "Share your brief", text: "Send a drawing, tech pack or product reference." },
+  { title: "Review options", text: "We check feasibility and coordinate samples." },
+  { title: "Confirm the order", text: "Agree on price, timing, quality checks and shipping." },
 ];
 ---
 
 <BaseLayout
-  title="Tomi Trading | China Supply Partner for Industrial & Consumer Products"
-  description="Tomi Trading is a Guangzhou sourcing partner for CNC machined parts, small machinery, home storage, automotive films and garments."
+  title="Tomi Trading | Manufacturing & Product Supply from China"
+  description="CNC machining, apparel and work trousers, pet toys, network and USB cables, and automotive films. Product development, samples and export coordination from Guangzhou."
   image="/images/guangzhou-skyline-hero.jpg"
 >
-  <section class="hero hero-city">
-    <div class="hero-city-overlay"></div>
+  <section class="hero hero-city" aria-labelledby="home-title">
+    <div class="hero-city-overlay" aria-hidden="true"></div>
     <div class="container hero-city-content">
       <p class="eyebrow">Guangzhou, China</p>
-      <p class="hero-wordmark">Tomi Trading</p>
-      <h1>Your China Supply Partner.</h1>
-      <p class="lead">
-        Industrial parts, small machinery, home storage, automotive films and garments
-        sourced and coordinated from Guangzhou.
-      </p>
+      <h1 id="home-title">Manufacturing &amp; supply from China.</h1>
+      <p class="lead">CNC parts, apparel, pet toys, cables and automotive films.</p>
       <div class="button-row">
-        <a class="button primary" href="/contact">Start an Inquiry</a>
-        <a class="button secondary light" href={SITE.whatsappUrl}>WhatsApp Us</a>
-      </div>
-      <p class="hero-trust-line">Source in China. Customize for your market. Ship with clarity.</p>
-    </div>
-  </section>
-
-  <section class="section statement-section">
-    <div class="container statement-grid">
-      <p class="eyebrow">Our mission</p>
-      <div>
-        <h2>Make China sourcing clearer and easier to manage.</h2>
-        <p>From product brief to sample, packaging and shipment coordination.</p>
+        <a class="site-action light-action" href={inquiryHref()}>Start an inquiry <span aria-hidden="true">↗</span></a>
+        <a class="site-action outline-action" href="#product-categories">Explore products <span aria-hidden="true">↓</span></a>
       </div>
     </div>
   </section>
 
-  <section class="section white" id="product-categories">
-    <div class="container">
-      <div class="section-header products-header">
-        <p class="eyebrow">What we source</p>
-        <h2>Selected product categories</h2>
-        <p class="lead">Choose a category to begin.</p>
-      </div>
-      <div class="category-grid">
-        {PRODUCT_CATEGORIES.map((category) => <ServiceCard {...category} />)}
-      </div>
+  <section class="wide-container range-section home-ranges" id="product-categories" aria-labelledby="range-heading">
+    <div class="range-section-head">
+      <h2 id="range-heading">Product ranges</h2>
+      <a class="inline-action" href="/products/">View all capabilities <span aria-hidden="true">↗</span></a>
     </div>
+    <RangeGrid />
   </section>
 
-  <section class="section" id="sourcing-services">
-    <div class="container service-layout compact-service-layout">
-      <div class="service-layout-copy">
-        <p class="eyebrow">How we help</p>
-        <h2>Simple support around the order.</h2>
-        <p>Sourcing / samples / quality / shipping.</p>
-        <a class="button text" href="/services">Explore our services</a>
-      </div>
-      <div class="service-grid">
-        {SERVICE_LINKS.map((service) => (
-          <article class="service-tile">
-            <span>{service.number}</span>
-            <h3>{service.title}</h3>
-            <p>{service.text}</p>
-          </article>
-        ))}
-      </div>
+  <section class="wide-container range-section production-section" id="sourcing-services" aria-labelledby="production-heading">
+    <div class="production-intro">
+      <h2 id="production-heading">How we work</h2>
+      <a href="/services/" class="inline-action">View sourcing services <span aria-hidden="true">↗</span></a>
     </div>
+    <ol class="production-steps">
+      {steps.map((step) => <li><h3>{step.title}</h3><p>{step.text}</p></li>)}
+    </ol>
   </section>
 
-  <section class="section white compact-process-section">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">A straightforward start</p>
-        <h2>From brief to next step.</h2>
-      </div>
-      <div class="mini-process-grid">
-        {steps.map((step) => (
-          <article>
-            <span>{step.number}</span>
-            <h3>{step.title}</h3>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <CTA
-    eyebrow="Ready when you are"
-    title="Start with one product brief."
-    text="Drawing / product photo / sample requirement / sourcing brief."
-    primaryLabel="Send an RFQ"
-    secondaryLabel="WhatsApp Us"
-    secondaryHref={SITE.whatsappUrl}
-  />
+  <div class="wide-container inquiry-wrap">
+    <section class="inquiry-band" aria-labelledby="home-inquiry-heading">
+      <h2 id="home-inquiry-heading">Get a quote for your project</h2>
+      <a class="site-action light-action" href={inquiryHref()}>Send an RFQ <span aria-hidden="true">↗</span></a>
+    </section>
+  </div>
 </BaseLayout>

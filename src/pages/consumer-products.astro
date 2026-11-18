@@ -7,9 +7,9 @@ import ServiceCard from "../components/ServiceCard.astro";
 const services = [
   {
     title: "Apparel Manufacturing",
-    text: "OEM/ODM support for T-shirts, blanks, streetwear basics and custom apparel.",
+    text: "T-shirts, polos, hoodies, work trousers, denim, womenswear and kidswear.",
     href: "/apparel-manufacturing",
-    image: "/images/garments-visual.jpg"
+    image: "/images/ranges/apparel.webp"
   },
   {
     title: "Home Storage Products",
@@ -26,9 +26,8 @@ const services = [
   image="/images/home-storage-products-visual.jpg"
 >
   <PageHero
-    eyebrow="Consumer products"
-    title="Selected consumer product sourcing from China"
-    text="Tomi Trading supports apparel and home storage product sourcing, OEM/ODM production, packaging coordination and export preparation."
+    title="Consumer products"
+    text="Apparel and home storage sourcing, with OEM and ODM support."
     image="/images/home-storage-products-visual.jpg"
     imageAlt="Consumer products placeholder"
   />
@@ -36,12 +35,7 @@ const services = [
   <section class="section white">
     <div class="container">
       <div class="section-header">
-        <p class="eyebrow">Focused categories</p>
-        <h2>Clear categories for cleaner factory matching</h2>
-        <p class="lead">
-          We focus on practical, repeatable consumer product categories where buyers often
-          need help with materials, samples, colors, packaging and export coordination.
-        </p>
+        <h2>Product categories</h2>
       </div>
       <div class="grid two">
         {services.map((service) => <ServiceCard {...service} />)}
@@ -52,18 +46,11 @@ const services = [
   <section class="section">
     <div class="container split">
       <div class="content-block">
-        <p class="eyebrow">OEM / ODM support</p>
-        <h2>From product idea to sample and production follow-up</h2>
-        <p>
-          For apparel and home storage products, we help clarify materials, color options,
-          size details, packaging requirements and export preparation so buyers can compare
-          options more efficiently.
-        </p>
+        <h2>Production support</h2>
         <ul>
-          <li>Factory partner communication and quotation follow-up</li>
-          <li>Sample coordination before bulk order confirmation</li>
-          <li>Packaging, labeling and carton information coordination</li>
-          <li>Pre-shipment checking based on buyer requirements</li>
+          <li>Factory quotes and samples</li>
+          <li>Packaging, labels and carton details</li>
+          <li>Pre-shipment checks as required</li>
         </ul>
       </div>
       <div class="image-frame">

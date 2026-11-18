@@ -4,14 +4,16 @@ import Footer from "../components/Footer.astro";
 import QuickContact from "../components/QuickContact.astro";
 import { SITE } from "../data/site";
 import "../styles/global.css";
+import "../styles/ranges.css";
 
 interface Props {
   title: string;
   description: string;
   image?: string;
+  inquiryCategory?: string;
 }
 
-const { title, description, image = "/images/quality-inspection-placeholder.jpg" } = Astro.props;
+const { title, description, image = "/images/quality-inspection-placeholder.jpg", inquiryCategory } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, SITE.siteUrl).toString();
 const ogImage = new URL(image, SITE.siteUrl).toString();
 const organizationJsonLd = {
@@ -59,12 +61,13 @@ const organizationJsonLd = {
     <script type="application/ld+json" set:html={JSON.stringify(organizationJsonLd)} />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
     <Header />
-    <main class="main-content">
+    <main class="main-content" id="main-content" tabindex="-1">
       <slot />
     </main>
-    <QuickContact />
+    <QuickContact category={inquiryCategory} />
     <Footer />
     </div>
   </body>

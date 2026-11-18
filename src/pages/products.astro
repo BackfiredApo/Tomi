@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import RangeGrid from "../components/RangeGrid.astro";
+import { inquiryHref } from "../data/capabilities";
+---
+
+<BaseLayout title="Products & Capabilities | Tomi Trading" description="Explore Tomi Trading’s CNC machining, apparel, pet toys, network and USB cables, and automotive films.">
+  <section class="range-page-hero directory-hero">
+    <div class="wide-container">
+      <h1>Products &amp; capabilities</h1>
+    </div>
+  </section>
+  <section class="range-section wide-container" id="product-categories" aria-label="Product ranges">
+    <RangeGrid />
+  </section>
+  <section class="range-section wide-container secondary-ranges" aria-labelledby="more-heading">
+    <h2 id="more-heading">Other capabilities</h2>
+    <ul>
+      <li><a href="/sheet-metal-fabrication/">Sheet metal fabrication <span aria-hidden="true">↗</span></a></li>
+      <li><a href="/small-machinery-power-equipment/">Small machinery &amp; power equipment <span aria-hidden="true">↗</span></a></li>
+      <li><a href="/home-storage-products/">Home storage products <span aria-hidden="true">↗</span></a></li>
+    </ul>
+  </section>
+  <div class="wide-container inquiry-wrap">
+    <section class="inquiry-band" aria-labelledby="project-heading">
+      <h2 id="project-heading">Get a quote for your project</h2>
+      <a class="site-action light-action" href={inquiryHref()}>Request a quote <span aria-hidden="true">↗</span></a>
+    </section>
+  </div>
+</BaseLayout>

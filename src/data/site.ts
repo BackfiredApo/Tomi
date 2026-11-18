@@ -12,48 +12,10 @@ export const SITE = {
 
 export const NAV_ITEMS = [
   { label: "Home", href: "/" },
-  { label: "Products", href: "/#product-categories" },
+  { label: "Products", href: "/products/" },
   { label: "Services", href: "/services" },
   { label: "Quality", href: "/quality-inspection" },
   { label: "Contact", href: "/contact" }
-];
-
-export const PRODUCT_CATEGORIES = [
-  {
-    title: "CNC Machined Parts",
-    text: "Brackets, shafts, bushings, flanges and custom metal parts.",
-    href: "/cnc-machining",
-    image: "/images/cnc-machined-parts-visual.jpg",
-    meta: "Industrial parts"
-  },
-  {
-    title: "Small Machinery",
-    text: "Water pumps, generators and compactors.",
-    href: "/small-machinery-power-equipment",
-    image: "/images/small-machinery-visual.jpg",
-    meta: "Power equipment"
-  },
-  {
-    title: "Home Storage Products",
-    text: "Storage boxes, organizers and household storage.",
-    href: "/home-storage-products",
-    image: "/images/home-storage-products-visual.jpg",
-    meta: "Consumer goods"
-  },
-  {
-    title: "PPF & TPU Color Change Film",
-    text: "PPF and TPU color change film.",
-    href: "/automotive-films",
-    image: "/images/automotive-film-placeholder.jpg",
-    meta: "Automotive films"
-  },
-  {
-    title: "Garments",
-    text: "T-shirts, hoodies, pants and jeans.",
-    href: "/apparel-manufacturing",
-    image: "/images/garments-visual.jpg",
-    meta: "Apparel sourcing"
-  }
 ];
 
 export const SERVICE_LINKS = [
@@ -109,6 +71,7 @@ export const RFQ_STEPS = [
 
 export const PAGE_URLS = [
   "/",
+  "/products",
   "/about",
   "/industrial-manufacturing",
   "/cnc-machining",
@@ -116,6 +79,8 @@ export const PAGE_URLS = [
   "/small-machinery-power-equipment",
   "/consumer-products",
   "/apparel-manufacturing",
+  "/pet-toys",
+  "/cables",
   "/home-storage-products",
   "/automotive-films",
   "/services",

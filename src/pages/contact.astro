@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
 import { SITE } from "../data/site";
+import { PRODUCT_RANGES } from "../data/capabilities";
 
 const mailtoAction = `mailto:${SITE.email}?subject=RFQ%20from%20Tomi%20Trading%20website`;
 ---
@@ -12,16 +13,20 @@ const mailtoAction = `mailto:${SITE.email}?subject=RFQ%20from%20Tomi%20Trading%2
   image="/images/contact-rfq-visual.jpg"
 >
   <PageHero
-    eyebrow="Contact / RFQ"
-    title="Send your RFQ to Tomi Trading"
-    text="Share a drawing, product photo, sample requirement or sourcing brief. We will review feasibility and reply with practical next steps."
+    title="Contact & inquiries"
+    text="Send your product specifications or a reference photo."
     image="/images/contact-rfq-visual.jpg"
     imageAlt="RFQ workspace with Guangzhou skyline"
-  />
+  >
+    <Fragment slot="actions">
+      <a class="button primary" href="#rfq">Inquiry form</a>
+      <a class="button secondary" href="#contact-options">Contact options</a>
+    </Fragment>
+  </PageHero>
 
   <section class="section white">
-    <div class="container split">
-      <div class="card contact-details">
+    <div class="container split contact-layout">
+      <div class="card contact-details" id="contact-options">
         <div class="contact-line">
           <strong>Company</strong>
           <span>{SITE.companyName}</span>
@@ -39,15 +44,12 @@ const mailtoAction = `mailto:${SITE.email}?subject=RFQ%20from%20Tomi%20Trading%2
           <a href={SITE.whatsappUrl}>{SITE.whatsappDisplay}</a>
         </div>
         <div class="button-row">
-          <a class="button primary" href={`mailto:${SITE.email}`}>Email Us</a>
-          <a class="button secondary" href={SITE.whatsappUrl}>WhatsApp Us</a>
-          <a class="button bronze" href={mailtoAction}>Send Drawing</a>
+          <a class="button secondary" href={mailtoAction}>Email a drawing</a>
         </div>
       </div>
 
-      <form class="card feature-card" action={mailtoAction} method="post" enctype="text/plain">
-        <p class="eyebrow">Visual RFQ form</p>
-        <h2>Send RFQ</h2>
+      <form class="card feature-card" id="rfq" action={mailtoAction} method="post" enctype="text/plain">
+        <h2>Request a quote</h2>
         <div class="form-grid">
           <div class="field">
             <label for="name">Name</label>
@@ -68,26 +70,32 @@ const mailtoAction = `mailto:${SITE.email}?subject=RFQ%20from%20Tomi%20Trading%2
           <div class="field full">
             <label for="category">Product category</label>
             <select id="category" name="Product category">
-              <option value="CNC machining">CNC machining</option>
+              <option value="">Select a category</option>
+              {PRODUCT_RANGES.map((range) => <option value={range.title} data-category={range.id}>{range.title}</option>)}
               <option value="Sheet metal fabrication">Sheet metal fabrication</option>
-          <option value="Small machinery and power equipment">Small machinery and power equipment</option>
-          <option value="PPF and TPU color change film">PPF and TPU color change film</option>
-          <option value="Garments and apparel">Garments and apparel</option>
-          <option value="Home storage products">Home storage products</option>
+              <option value="Small machinery and power equipment">Small machinery and power equipment</option>
+              <option value="Home storage products">Home storage products</option>
               <option value="Other sourcing request">Other sourcing request</option>
             </select>
           </div>
           <div class="field full">
-            <label for="message">Message / RFQ details</label>
-            <textarea id="message" name="Message / RFQ details" placeholder="Material, quantity, drawing availability, target price, packaging, destination market or other details."></textarea>
+            <label for="message">Project details</label>
+            <textarea id="message" name="Message / RFQ details" placeholder="Specifications, quantity and destination market"></textarea>
           </div>
         </div>
-        <p class="note">For drawings or files, please email us directly at {SITE.email}.</p>
+        <p class="note">Attach drawings or photos to the email draft before sending.</p>
         <div class="button-row">
-          <button class="button primary" type="submit">Send RFQ</button>
+          <button class="button primary" type="submit">Open email draft</button>
           <a class="button secondary" href={SITE.whatsappUrl}>WhatsApp Us</a>
         </div>
       </form>
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const select = document.querySelector<HTMLSelectElement>("#category");
+  const requestedCategory = new URLSearchParams(window.location.search).get("category");
+  const option = Array.from(select?.options ?? []).find((item) => item.dataset.category === requestedCategory);
+  if (select && option) select.value = option.value;
+</script>

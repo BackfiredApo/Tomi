@@ -17,14 +17,15 @@ const { eyebrow, title, text, image, imageAlt = title } = Astro.props;
       <h1>{title}</h1>
       <p class="lead">{text}</p>
       <div class="button-row">
-        <a class="button primary" href="/contact">Request a Quote</a>
-        <a class="button secondary" href="/contact">Contact Us</a>
+        <slot name="actions">
+          <a class="button primary" href="/contact/#rfq">Request a Quote</a>
+        </slot>
       </div>
     </div>
     {
       image && (
         <div class="page-hero-image">
-          <img src={image} alt={imageAlt} />
+          <img src={image} alt={imageAlt} fetchpriority="high" decoding="async" />
         </div>
       )
     }

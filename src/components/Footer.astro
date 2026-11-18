@@ -3,27 +3,26 @@ import { SITE } from "../data/site";
 ---
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="wide-container">
     <div class="footer-grid">
       <div>
         <h2>{SITE.brandName}</h2>
-        <p>China sourcing, made clear.</p>
+        <p>Manufacturing &amp; supply</p>
       </div>
       <div>
         <h3>Industrial</h3>
         <div class="footer-links">
           <a href="/cnc-machining">CNC Machining</a>
-          <a href="/sheet-metal-fabrication">Sheet Metal Fabrication</a>
-          <a href="/small-machinery-power-equipment">Small Machinery</a>
+          <a href="/cables">Network &amp; USB Cables</a>
           <a href="/automotive-films">PPF &amp; TPU Films</a>
         </div>
       </div>
       <div>
         <h3>Consumer</h3>
         <div class="footer-links">
-          <a href="/apparel-manufacturing">Garments</a>
-          <a href="/home-storage-products">Home Storage Products</a>
-          <a href="/services">Sourcing Services</a>
+          <a href="/apparel-manufacturing">Apparel Manufacturing</a>
+          <a href="/pet-toys">Pet Toys</a>
+          <a href="/products/">All product ranges</a>
         </div>
       </div>
       <div>
@@ -32,12 +31,12 @@ import { SITE } from "../data/site";
           <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
           <a href={SITE.whatsappUrl}>WhatsApp {SITE.whatsappDisplay}</a>
           <span>{SITE.location}</span>
-          <a href="/contact">RFQ Form &amp; Contact Options</a>
+          <a href="/contact">Inquiry form</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; {new Date().getFullYear()} {SITE.companyName}. All rights reserved.</span>
+      <span>&copy; {new Date().getFullYear()} {SITE.companyName} All rights reserved.</span>
     </div>
   </div>
 </footer>

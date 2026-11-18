@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { inquiryHref, type Capability } from "../data/capabilities";
+
+interface Props {
+  range: Capability;
+}
+
+const { range } = Astro.props;
+---
+
+<BaseLayout title={`${range.title} | Tomi Trading`} description={range.introduction} image={range.image} inquiryCategory={range.id}>
+  <section class="range-page-hero">
+    <div class="wide-container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/products/">Products</a><span aria-hidden="true">/</span><span aria-current="page">{range.title}</span>
+      </nav>
+      <div class="range-page-grid">
+        <div>
+          <h1>{range.title}</h1>
+          <p>{range.introduction}</p>
+          <div class="button-row">
+            <a class="site-action dark-action" href={inquiryHref(range.id)}>Request a quote <span aria-hidden="true">↗</span></a>
+            {range.catalogues && <a class="site-action outline-action" href="#catalogues">View catalogues</a>}
+          </div>
+        </div>
+        <figure class="range-page-image">
+          <img src={range.image} alt={range.imageAlt} width="720" height="480" fetchpriority="high" decoding="async" />
+          <figcaption>Product illustration</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="range-section wide-container" aria-labelledby="scope-heading">
+    <h2 id="scope-heading">Product scope</h2>
+    <div class="scope-grid">
+      {range.scope.map((item) => <article><h3>{item.title}</h3><p>{item.text}</p></article>)}
+    </div>
+  </section>
+
+  {range.catalogues && (
+    <section class="range-section wide-container" id="catalogues" aria-labelledby="catalogue-heading">
+      <h2 id="catalogue-heading">Catalogues</h2>
+      <ul class="catalogue-list">
+        {range.catalogues.map((catalogue) => (
+          <li>
+            <div><h3>{catalogue.title}</h3><p>{catalogue.description}</p></div>
+            <a class="site-action outline-action" href={catalogue.href} aria-label={`View ${catalogue.title} PDF`}>View PDF <span aria-hidden="true">↗</span></a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <div class="wide-container inquiry-wrap">
+    <section class="inquiry-band" aria-labelledby="brief-heading">
+      <div><h2 id="brief-heading">What to send for a quote</h2>
+        <ul>{range.brief.map((detail) => <li>{detail}</li>)}</ul>
+      </div>
+      <a class="site-action light-action" href={inquiryHref(range.id)}>Request a quote <span aria-hidden="true">↗</span></a>
+    </section>
+  </div>
+</BaseLayout>
